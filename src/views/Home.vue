@@ -1,5 +1,5 @@
 <template>
-  <section class="home section hidden">
+  <section class="home section">
     <div class="container">
       <div class="row">
         <div class="home-info padd-15">
@@ -16,7 +16,8 @@
             На данный момент у меня уже есть опыть работы с Vue.js и React.js. Не собираюсь
             на этом останавливаться и продолжу искать опыт в разных проектах...
           </p>
-          <a href="#contact" class="btn hire-me">Связаться со мной</a>
+          <router-link to="/contact" class="btn hire-me">Связаться со мной</router-link>
+          <!-- <a href="#contact" class="btn hire-me">Связаться со мной</a> -->
         </div>
         <div class="home-img padd-15">
           <img src="../assets/my-foto.jpg" alt="my-foto">

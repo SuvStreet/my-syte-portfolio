@@ -1,16 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Comforter&family=Poppins:wght@200;300;400;500;600;700&display=swap')
-@import './colors/color-1'
+// @use 'colors/color-1'
 
-$--bg-black-900: #f2f2fc
-$--bg-black-100: #fdf9ff
-$--bg-black-50: #e8dfec
-$--text-black-900: #302e4d
-$--text-black-700: #504e70
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Comforter&family=Poppins:wght@200;300;400;500;600;700&display=swap')
+
+// @import './colors/color-1'
+// @import './colors/color-2'
+// @import './colors/color-3'
+// @import './colors/color-4'
+// @import './colors/color-5'
+// @import './colors/color'
+
+:root
+  --color-1: #ec1839
+  --color-2: #fa5b0f
+  --color-3: #37b182
+  --color-4: #1854b4
+  --color-5: #f021b2
+  --skin-color: var()
+
+  --bg-black-900: #f2f2fc
+  --bg-black-100: #fdf9ff
+  --bg-black-50: #e8dfec
+  --text-black-900: #302e4d
+  --text-black-700: #504e70
 
 body
   line-height: 1.5
   font-size: 16px
   font-family: 'Poppins', sans-serif
+
+.dark
+  --bg-black-900: #151515
+  --bg-black-100: #222
+  --bg-black-50: #393939
+  --text-black-900: #fff
+  --text-black-700: #e9e9e9
 
 *
   margin: 0
@@ -26,7 +50,7 @@ ul
   list-style: none
 
 .section
-  background: $--bg-black-900
+  background: var(--bg-black-900)
   min-height: 100vh
   display: block
   padding: 0 30px
@@ -58,7 +82,7 @@ ul
 
 .section-title h2
   font-size: 40px
-  color: $--text-black-900
+  color: var(--text-black-900)
   font-weight: 700
   position: relative
 
@@ -66,7 +90,7 @@ ul
   content: ''
   height: 4px
   width: 50px
-  background-color: $--skin-color
+  background-color: var(--skin-color)
   position: absolute
   top: 100%
   left: 0
@@ -75,7 +99,7 @@ ul
   content: ''
   height: 4px
   width: 25px
-  background-color: $--skin-color
+  background-color: var(--skin-color)
   position: absolute
   top: 100%
   left: 0
@@ -97,7 +121,7 @@ ul
   display: inline-block
   white-space: nowrap
   border: none
-  background: $--skin-color
+  background: var(--skin-color)
   transition: all .3s ease
 
 .btn:hover
@@ -112,6 +136,7 @@ ul
 @import './service'
 @import './portfolio'
 @import './contact'
+@import './style-switcher'
 
 @media (max-width: 1199px) 
   .aside

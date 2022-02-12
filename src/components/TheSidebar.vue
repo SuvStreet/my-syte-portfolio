@@ -9,9 +9,7 @@
       </div>
       <ul class="nav">
         <li>
-          <router-link class="active" to="/"
-            ><i class="fa fa-home"></i>Главная</router-link
-          >
+          <router-link to="/"><i class="fa fa-home"></i>Главная</router-link>
         </li>
         <li>
           <router-link to="/about"
@@ -26,11 +24,15 @@
           <!-- <a href="#"><i class="fa fa-list"></i> Services</a> -->
         </li>
         <li>
-          <router-link to="/portfolio"><i class="fa fa-briefcase"></i>Портфолио</router-link>
+          <router-link to="/portfolio"
+            ><i class="fa fa-briefcase"></i>Портфолио</router-link
+          >
           <!-- <a href="#"><i class="fa fa-briefcase"></i> Portfolio</a> -->
         </li>
         <li>
-          <router-link to="/contact"><i class="fa fa-comments"></i>Контакты</router-link>
+          <router-link to="/contact"
+            ><i class="fa fa-comments"></i>Контакты</router-link
+          >
           <!-- <a href="#"><i class="fa fa-comments"></i> Contact</a> -->
         </li>
       </ul>
