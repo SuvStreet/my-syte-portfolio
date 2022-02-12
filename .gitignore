@@ -8,6 +8,7 @@ package-lock.json
 **/.firebaserc
 /.firebase
 .firebase/
+firebase.json
 
 # local env files
 .env.local

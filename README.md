@@ -1,19 +1,3 @@
-# app
+# Ведётся разработка сайта портфолио, следить за изменениями можно по ссылке:
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://suvstreet-portfolio.web.app
