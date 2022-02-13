@@ -11,6 +11,8 @@
   justify-content: center
   align-items: center
   z-index: 10
+  transition: all 0.3s ease-in-out
+  // transition-delay: 0.5s
 
 .aside .logo
   position: absolute
@@ -63,31 +65,50 @@
   display: none
   align-items: center
   justify-content: center
+  transition: all 0.3s ease-in-out
+  // transition-delay: 0.5s
 
-.aside .nav-toggler span
-  height: 2px
-  width: 18px
-  background: var(--skin-color)
-  display: inline-block
-  position: relative
+.aside .nav-toggler
 
-.aside .nav-toggler span::before
-  content: ''
-  height: 2px
-  width: 18px
-  background: var(--skin-color)
-  position: absolute
-  top: -6px
-  left: 0
+  &.open span
+    background-color: transparent
 
-.aside .nav-toggler span::after
-  content: ''
-  height: 2px
-  width: 18px
-  background: var(--skin-color)
-  position: absolute
-  top: 6px
-  left: 0
+  & span
+    height: 2px
+    width: 18px
+    background: var(--skin-color)
+    display: inline-block
+    position: relative
+
+.aside .nav-toggler
+
+  &.open span::before
+    transform: rotate(45deg)
+    top: 0
+  
+  & span::before
+    content: ''
+    height: 2px
+    width: 18px
+    background: var(--skin-color)
+    position: absolute
+    top: -6px
+    left: 0
+
+.aside .nav-toggler
+
+  &.open span::after
+    transform: rotate(-45deg)
+    top: 0
+  
+  & span::after
+    content: ''
+    height: 2px
+    width: 18px
+    background: var(--skin-color)
+    position: absolute
+    top: 6px
+    left: 0
 
 .aside .nav
   margin-top: 50px

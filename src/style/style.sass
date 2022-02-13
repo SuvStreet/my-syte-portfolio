@@ -44,18 +44,32 @@ ul
 // .fade-enter-active     fade-leave-active
 // .fade-enter-to         fade-leave-to
 
-.fade-enter-active, .fade-leave-active
-  animation: slideSection 1s forwards
+.fade-enter-active
+  animation: slideNextSection .5s forwards
 
 .fade-leave-active
-  animation: slideSection 1s reverse
-  animation-delay: 1s
+  animation: slidePrevSection .5s forwards
 
-@keyframes slideSection
+@keyframes slideNextSection
   0%
     transform: translateX(100%)
   100%
     transform: translateX(0)
+
+@keyframes slidePrevSection
+  0%
+    transform: translateX(0)
+  100%
+    transform: translateX(-100%)
+
+.padd-15
+  padding-left: 15px
+  padding-right: 15px
+
+.container
+  max-width: 1100px
+  width: 100%
+  margin: auto
 
 .section
   background-color: var(--bg-black-900)
@@ -71,19 +85,10 @@ ul
   z-index: 0
   overflow-y: auto
   overflow-x: hidden
-
-.padd-15
-  padding-left: 15px
-  padding-right: 15px
-
+  transition: all 0.3s ease-in-out
 
 // .main-content
 //   padding-left: 270px
-
-.container
-  max-width: 1100px
-  width: 100%
-  margin: auto
 
 .section .container
   padding-top: 60px
@@ -155,8 +160,20 @@ ul
 @media (max-width: 1199px) 
   .aside
     left: -270px
-  .main-content
-    padding-left: 0
+    &.open
+      left: 0
+    & .nav-toggler
+      display: flex
+      left: 30px
+      &.open
+        left: 300px
+  .section
+    left: 0
+    & .container
+      padding-top: 70px
+
+    &.open
+      left: 270px
   .about .about-content .personal-info .info-item p span
     display: block
     margin-left: 0

@@ -1,46 +1,49 @@
 <template>
   <div class="main-container">
-    <div class="aside">
+    <div :class="['aside', isToggleNav]">
       <div class="logo">
         <router-link to="/"><span>Suv</span>Street </router-link>
       </div>
-      <div class="nav-toggler">
+      <div :class="['nav-toggler', isToggleNav]" @click="isNav">
         <span></span>
       </div>
       <ul class="nav">
-        <li>
-          <router-link to="/"><i class="fa fa-home"></i>Главная</router-link>
+        <li @click="isNav">
+          <router-link to="/">
+            <i class="fa fa-home"></i>
+            Главная
+          </router-link>
         </li>
-        <li>
-          <router-link to="/about"
-            ><i class="fa fa-user"></i>Обо мне</router-link
-          >
-          <!-- <a href="#"><i class="fa fa-user"></i> About</a> -->
+        <li @click="isNav">
+          <router-link to="/about">
+            <i class="fa fa-user"></i>
+            Обо мне
+          </router-link>
         </li>
-        <li>
-          <router-link to="/service"
-            ><i class="fa fa-cog"></i>Услуги</router-link
-          >
-          <!-- <a href="#"><i class="fa fa-list"></i> Services</a> -->
+        <li @click="isNav">
+          <router-link to="/service">
+            <i class="fa fa-cog"></i>
+            Услуги
+          </router-link>
         </li>
-        <li>
-          <router-link to="/portfolio"
-            ><i class="fa fa-briefcase"></i>Портфолио</router-link
-          >
-          <!-- <a href="#"><i class="fa fa-briefcase"></i> Portfolio</a> -->
+        <li @click="isNav">
+          <router-link to="/portfolio">
+            <i class="fa fa-briefcase"></i>
+            Портфолио
+          </router-link>
         </li>
-        <li>
-          <router-link to="/contact"
-            ><i class="fa fa-comments"></i>Контакты</router-link
-          >
-          <!-- <a href="#"><i class="fa fa-comments"></i> Contact</a> -->
+        <li @click="isNav">
+          <router-link to="/contact">
+            <i class="fa fa-comments"></i>
+            Контакты
+          </router-link>
         </li>
       </ul>
     </div>
     <div class="main-content">
       <router-view v-slot="{ Component }">
         <transition name="fade">
-          <component :is="Component" @scroll="isClose" />
+          <component :is="Component" @scroll="isClose" :class="isToggleNav" />
         </transition>
       </router-view>
     </div>
@@ -48,11 +51,13 @@
 </template>
 
 <script>
+import { ref } from '@vue/reactivity'
 import { useStore } from 'vuex'
 
 export default {
   setup() {
     const store = useStore()
+    const isToggleNav = ref('')
 
     function isClose() {
       if (store.getters['styleSwitcher/isOpen'] === true) {
@@ -60,8 +65,16 @@ export default {
       }
     }
 
+    function isNav() {
+      isToggleNav.value === ''
+        ? (isToggleNav.value = 'open')
+        : (isToggleNav.value = '')
+    }
+
     return {
-      isClose
+      isClose,
+      isNav,
+      isToggleNav,
     }
   },
 }

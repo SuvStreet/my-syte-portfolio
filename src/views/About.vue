@@ -14,10 +14,12 @@
                 Меня зовут Дмитрий Колотуша и я <span>веб-разработчик</span>
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam aspernatur cupiditate aut atque voluptatem, ut natus,
-                fugit sequi ratione accusamus mollitia molestias, maiores ad.
-                Repudiandae numquam, ab sunt sed atque magni enim doloribus.
+                Трудолюбивый и заинтересованный веб-разработчик. Мне нравится
+                разрабатывать и оживлять сайты. Люблю решать трудности, изучать
+                новые технологии и умею задавать вопросы что бы учиться быстрее.
+                На данный момент у меня уже есть опыть работы с Vue.js и
+                React.js. Не собираюсь на этом останавливаться и продолжу искать
+                опыт в разных проектах...
               </p>
             </div>
           </div>
@@ -48,8 +50,10 @@
               </div>
               <div class="row">
                 <div class="buttons padd-15">
-                  <a href="#" class="btn">Скачать резюме</a>
-                  <a href="#contact" class="btn hire-me">Связаться со мной</a>
+                  <router-link to="/contact" class="btn hire-me"
+                    >Связаться со мной</router-link
+                  >
+                  <!-- <a href="#contact" class="btn "></a> -->
                 </div>
               </div>
             </div>
@@ -153,7 +157,7 @@
             </div>
             <div class="experience padd-15">
               <h3 class="title">Опыт</h3>
-               <div class="row">
+              <div class="row">
                 <div class="timeline-box padd-15">
                   <div class="timeline shadow-dark">
                     <div class="timeline-item">
