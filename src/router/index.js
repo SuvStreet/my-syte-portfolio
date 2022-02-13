@@ -5,27 +5,27 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
     path: '/about',
     name: 'About',
-    component: () => import('../views/About.vue')
+    component: () => import('../views/About.vue'),
   },
   {
     path: '/service',
     name: 'Service',
-    component: () => import('../views/Service.vue')
+    component: () => import('../views/Service.vue'),
   },
   {
     path: '/portfolio',
     name: 'Portfolio',
-    component: () => import('../views/Portfolio.vue')
+    component: () => import('../views/Portfolio.vue'),
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: () => import('../views/Contact.vue')
+    component: () => import('../views/Contact.vue'),
   },
 ]
 
@@ -33,7 +33,7 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   linkActiveClass: 'active',
   linkExactActiveClass: 'active',
-  routes
+  routes,
 })
 
 export default router

@@ -1,14 +1,5 @@
-// @use 'colors/color-1'
-
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css')
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Comforter&family=Poppins:wght@200;300;400;500;600;700&display=swap')
-
-// @import './colors/color-1'
-// @import './colors/color-2'
-// @import './colors/color-3'
-// @import './colors/color-4'
-// @import './colors/color-5'
-// @import './colors/color'
 
 :root
   --color-1: #ec1839
@@ -49,22 +40,45 @@ body
 ul
   list-style: none
 
+// .fade-enter-from       fade-leave-from
+// .fade-enter-active     fade-leave-active
+// .fade-enter-to         fade-leave-to
+
+.fade-enter-active, .fade-leave-active
+  animation: slideSection 1s forwards
+
+.fade-leave-active
+  animation: slideSection 1s reverse
+  animation-delay: 1s
+
+@keyframes slideSection
+  0%
+    transform: translateX(100%)
+  100%
+    transform: translateX(0)
+
 .section
-  background: var(--bg-black-900)
+  background-color: var(--bg-black-900)
   min-height: 100vh
   display: block
   padding: 0 30px
   opacity: 1
-
-.hidden
-  // display: none !important
-
-.main-content
-  padding-left: 270px
+  position: fixed
+  left: 270px
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 0
+  overflow-y: auto
+  overflow-x: hidden
 
 .padd-15
   padding-left: 15px
   padding-right: 15px
+
+
+// .main-content
+//   padding-left: 270px
 
 .container
   max-width: 1100px
@@ -79,31 +93,31 @@ ul
   flex: 0 0 100%
   max-width: 100%
   margin-bottom: 60px
+  
+  & h2
+    font-size: 40px
+    color: var(--text-black-900)
+    font-weight: 700
+    position: relative
 
-.section-title h2
-  font-size: 40px
-  color: var(--text-black-900)
-  font-weight: 700
-  position: relative
+    &::before
+      content: ''
+      height: 4px
+      width: 50px
+      background-color: var(--skin-color)
+      position: absolute
+      top: 100%
+      left: 0
 
-.section-title h2::before
-  content: ''
-  height: 4px
-  width: 50px
-  background-color: var(--skin-color)
-  position: absolute
-  top: 100%
-  left: 0
-
-.section-title h2::after
-  content: ''
-  height: 4px
-  width: 25px
-  background-color: var(--skin-color)
-  position: absolute
-  top: 100%
-  left: 0
-  margin-top: 8px
+    &::after
+      content: ''
+      height: 4px
+      width: 25px
+      background-color: var(--skin-color)
+      position: absolute
+      top: 100%
+      left: 0
+      margin-top: 8px
 
 .row
   display: flex
@@ -123,9 +137,9 @@ ul
   border: none
   background: var(--skin-color)
   transition: all .3s ease
-
-.btn:hover
-  transform: scale(1.05)
+  
+  &:hover
+    transform: scale(1.05)
 
 .shadow-dark
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15)
@@ -172,5 +186,3 @@ ul
   .about .about-content .personal-info
     flex: 0 0 100%
     max-width: 100%
-
-

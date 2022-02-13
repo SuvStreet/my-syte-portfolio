@@ -38,13 +38,33 @@
       </ul>
     </div>
     <div class="main-content">
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition name="fade">
+          <component :is="Component" @scroll="isClose" />
+        </transition>
+      </router-view>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import { useStore } from 'vuex'
+
+export default {
+  setup() {
+    const store = useStore()
+
+    function isClose() {
+      if (store.getters['styleSwitcher/isOpen'] === true) {
+        store.commit('styleSwitcher/toggle')
+      }
+    }
+
+    return {
+      isClose
+    }
+  },
+}
 </script>
 
 <style scoped lang="sass"></style>
