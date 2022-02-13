@@ -7,7 +7,7 @@
             Привет, меня зовут <span class="name">Дмитрий Колотуша</span>
           </h3>
           <h3 class="my-profession">
-            Я <span class="typing"></span>
+            Я <span class="typing" id="typing"></span>
           </h3>
           <p>
             Веб-разработчик с годовым опытом работы. Опыт заключается в создании
@@ -37,7 +37,7 @@ export default {
     })
 
     function textAnimation() {
-      new Typed('.typing', {
+      new Typed('#typing', {
         strings: [
           '',
           'веб разработчик',
