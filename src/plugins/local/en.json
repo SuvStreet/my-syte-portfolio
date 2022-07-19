@@ -1,0 +1,23 @@
+{
+  "home": {
+    "hello": "Hello, my Name Is ",
+    "name": "Dmitry Kolotusha",
+    "i": "I am a",
+    "typedStrings": {
+      "firstString": " ",
+      "secondString": "web developer",
+      "thirdString": "make up websites",
+      "fourthString": "junior frontend developer",
+      "fifthString": "js expert"
+    },
+    "info": "Web developer with 1 year experience. Experience lies in the creation of dynamic sites (SPA). I build websites based on React and Vue. I make them functional and optimized.",
+    "nameBtnSaveResume": "Download CV"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contacts": "Contacts"
+  }
+}

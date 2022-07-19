@@ -11,13 +11,13 @@
         <li @click="isNav">
           <router-link to="/">
             <i class="fa fa-home"></i>
-            Главная
+            {{ $t('menu.home') }}
           </router-link>
         </li>
         <li @click="isNav">
           <router-link to="/about">
             <i class="fa fa-user"></i>
-            Обо мне
+            {{ $t('menu.about') }}
           </router-link>
         </li>
         <li @click="isNav">
@@ -29,13 +29,13 @@
         <li @click="isNav">
           <router-link to="/portfolio">
             <i class="fa fa-briefcase"></i>
-            Портфолио
+            {{ $t('menu.portfolio') }}
           </router-link>
         </li>
         <li @click="isNav">
           <router-link to="/contact">
             <i class="fa fa-comments"></i>
-            Контакты
+            {{ $t('menu.contacts') }}
           </router-link>
         </li>
       </ul>

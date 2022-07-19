@@ -1,0 +1,23 @@
+{
+  "home": {
+    "hello": "Cześć, mam na imię ",
+    "name": "Dmitrij Kolotusza",
+    "i": "Jestem",
+    "typedStrings": {
+      "firstString": " ",
+      "secondString": "programistą stron internetowych",
+      "thirdString": "tworzę strony",
+      "fourthString": "junior frontend developer",
+      "fifthString": "js specjalista"
+    },
+    "info": "Programista stron internetowych z rocznym doświadczeniem. Doświadczenie polega na tworzeniu dynamicznych stron internetowych (SPA). Tworzę strony oparte na React i Vue. Sprawiają, że są funkcjonalne i zoptymalizowane.",
+    "nameBtnSaveResume": "Pobierz CV"
+  },
+  "menu": {
+    "home": "Strona główna",
+    "about": "O mnie",
+    "services": "Usługi",
+    "portfolio": "Portfolio",
+    "contacts": "Kontakt"
+  }
+}

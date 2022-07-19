@@ -15,29 +15,30 @@
         @click="setActiveStyle(col)"
       >
       </span>
-      <!-- <span class="color-1" ref="color" ></span>
-      <span class="color-2" ref="color" ></span>
-      <span class="color-3" ref="color" @click="setActiveStyle"></span>
-      <span class="color-4" ref="color" @click="setActiveStyle"></span>
-      <span class="color-5" ref="color" @click="setActiveStyle"></span> -->
     </div>
-    <!-- <h4>Язык</h4>
+    <h4>Язык</h4>
     <div class="language">
-      <span class="ru" @click="setActiveLanguage">RU</span>
-      <span class="en" @click="setActiveLanguage">EN</span>
-      <span class="pl" @click="setActiveLanguage">PL</span>
-    </div> -->
+      <span
+        v-for="(lang, id) in mapLanguage"
+        :key="id"
+        :class="[id]"
+        @click="setActiveLanguage(id)"
+      >
+        {{ lang }}
+      </span>
+    </div>
   </div>
 </template>
 
 <script>
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useStore } from 'vuex'
+import { useI18n } from 'vue-i18n'
 
 export default {
   setup() {
     const store = useStore()
-    const dayNight = ref(null)
+    const { t, locale } = useI18n()
 
     function isOpen() {
       store.commit('styleSwitcher/toggle')
@@ -46,16 +47,6 @@ export default {
     onMounted(() => {
       store.commit('styleSwitcher/defaultSkin')
       store.commit('styleSwitcher/defaultMode')
-
-      // dayNight.value = document.querySelector('.day-night')
-
-      // console.log('dayNight.value',dayNight.value.querySelector('i').classList.add('fa-sun')
-
-      // if (document.querySelector('#app').classList.contains('dark')) {
-      //   dayNight.value.querySelector('i').classList.add('fa-sun')
-      // } else {
-      //   dayNight.value.querySelector('i').classList.add('fa-moon')
-      // }
     })
 
     const mapColor = {
@@ -66,6 +57,12 @@ export default {
       'color-5': '--color-5',
     }
 
+    const mapLanguage = {
+      ru: 'RU',
+      en: 'EN',
+      pl: 'PL',
+    }
+
     const setActiveStyle = (value) => {
       store.dispatch('styleSwitcher/setActiveStyle', value)
     }
@@ -74,14 +71,21 @@ export default {
       store.dispatch('styleSwitcher/setActiveMode')
     }
 
+    function setActiveLanguage(value) {
+      store.commit('i18n/setLanguage', value)
+      locale.value = value
+    }
+
     return {
       setActiveStyle,
       isOpen,
       mapColor,
+      mapLanguage,
       lightDarkMode,
       className: computed(() =>
         store.getters['styleSwitcher/isOpen'] ? 'open' : ''
       ),
+      setActiveLanguage
     }
   },
 }
