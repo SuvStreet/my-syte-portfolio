@@ -23,7 +23,7 @@
         <li @click="isNav">
           <router-link to="/service">
             <i class="fa fa-cog"></i>
-            {{ $t('menu.service') }}
+            {{ $t('menu.services') }}
           </router-link>
         </li>
         <li @click="isNav">
