@@ -38,7 +38,7 @@ import { useI18n } from 'vue-i18n'
 export default {
   setup() {
     const store = useStore()
-    const { t, locale } = useI18n()
+    const { locale } = useI18n()
 
     function isOpen() {
       store.commit('styleSwitcher/toggle')

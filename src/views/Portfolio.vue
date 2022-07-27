@@ -11,6 +11,9 @@
           <h2>Мои последние проекты :</h2>
         </div>
       </div>
+
+      <TheSort/>
+
       <div class="row">
 
         <div class="portfolio-item padd-15">
@@ -67,7 +70,17 @@
 </template>
 
 <script>
-export default {}
+import TheSort from '../components/TheSort.vue'
+
+export default {
+  setup() {
+    return {
+    }
+  },
+  components: {
+    TheSort,
+  },
+}
 </script>
 
 <style></style>
