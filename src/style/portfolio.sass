@@ -26,12 +26,12 @@
     & .portfolio-img img
       width: 100%
       display: block
+      border-radius: 10px
 
 
 .portfolio-filter
   width: 100%
   margin-bottom: 40px
-
 
 .filter-btn
   width: 170px
@@ -46,9 +46,17 @@
   &:not(:last-child)
     margin-right: 10px
     margin-bottom: 10px
+  &.active
+    color: var(--skin-color)
 
-.active 
-  color: var(--skin-color)
 
+.portfolio-item-bg
+  background: var(--bg-black-100)
+
+.portfolio-title
+  color: var(--text-black-900)
+  font-weight: 500
+  font-size: 1rem
+  padding: 10px 5px 0px 5px
 
   
