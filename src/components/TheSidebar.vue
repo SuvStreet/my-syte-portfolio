@@ -66,9 +66,11 @@ export default {
     }
 
     function isNav() {
-      isToggleNav.value === ''
-        ? (isToggleNav.value = 'open')
-        : (isToggleNav.value = '')
+      store.getters.getIsToggleNav === ''
+        ? store.commit('setIsToggleNav', 'open')
+        : store.commit('setIsToggleNav', '')
+
+      isToggleNav.value = store.getters.getIsToggleNav
     }
 
     return {

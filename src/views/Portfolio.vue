@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio section">
+  <div class="portfolio section" v-if="false">
     <div class="container">
       <div class="row">
         <div class="section-title padd-15">
@@ -31,6 +31,10 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div v-else>
+    <router-view></router-view>
   </div>
 </template>
 

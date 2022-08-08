@@ -4,10 +4,19 @@ import i18n from './modules/i18n.module'
 
 export default createStore({
   state: {
+    isToggleNav: ''
   },
   mutations: {
+    setIsToggleNav(state, payload) {
+      state.isToggleNav = payload
+    }
   },
   actions: {
+  },
+  getters: {
+    getIsToggleNav(state) {
+      return state.isToggleNav
+    }
   },
   modules: {
     styleSwitcher,
