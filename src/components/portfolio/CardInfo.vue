@@ -1,5 +1,5 @@
 <template>
-  <div class="project-card">
+  <div :class="['project-card', $store.getters.getIsToggleDetails]" ref="card">
     <div class="section-title">
       <h2>Name Project</h2>
     </div>
@@ -23,7 +23,8 @@
             autem et. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Repudiandae ea iste totam amet officiis qui expedita mollitia ullam
             vero. Numquam tempore commodi perferendis dolores dolorum quas, nisi
-            ratione eveniet adipisci.
+            ratione eveniet adipisci. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit.
           </p>
         </div>
         <div class="project-tech-title">
@@ -38,61 +39,28 @@
         </div>
       </div>
     </div>
-    <hr/>
+    <hr />
   </div>
 </template>
 
 <script>
-export default {}
+import { ref, onMounted } from 'vue'
+import { useStore } from 'vuex'
+
+export default {
+  setup() {
+    const store = useStore()
+    const card = ref(null)
+
+    onMounted(() => {
+      store.commit('setStyleHeightCard', card.value)
+    })
+
+    return {
+      card,
+    }
+  },
+}
 </script>
 
-<style>
-.project-card hr{
-  border: 1px solid var(--text-black-900);
-  margin: 20px 0;
-}
-
-.project-content {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.project-tag {
-  font-size: 15px;
-  color: var(--text-black-900);
-  margin-bottom: 30px;
-  margin-top: -30px;
-}
-
-.project-tag small {
-  margin-right: 10px;
-}
-
-.project-content {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.project-content h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  font-weight: 700;
-  color: var(--text-black-900);
-}
-
-.project-content .project-title {
-  flex: 3 0 70%;
-}
-
-.project-title,
-.project-tech-title {
-  padding-right: 20px;
-}
-
-.project-title p,
-.project-tech-title ul {
-  font-size: 15px;
-  color: var(--text-black-900);
-}
-</style>
+<style></style>

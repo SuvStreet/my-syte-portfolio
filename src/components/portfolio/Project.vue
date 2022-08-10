@@ -1,12 +1,12 @@
 <template>
-  <!-- вёрстка когда открыты больше деталей -->
   <div :class="['project', 'section', $store.getters.getIsToggleNav]">
     <div class="container">
 
-      <CardInfo/>
-
+      <CardInfo />
+      
+      <!-- Две кнопки открыть детали проекта и закрыть сам проект -->
       <div class="row padd-15 btn-details">
-        <button class="btn">More details +</button>
+        <button class="btn" @click="clickDetails">More details +</button>
         <button class="btn">X</button>
       </div>
 
@@ -24,51 +24,35 @@
       </div>
     </div>
   </div>
-
-  <!-- Две кнопки открыть детали проекта и закрыть сам проект -->
 </template>
 
 <script>
+import { useStore } from 'vuex'
+
 import CardInfo from './CardInfo.vue'
 
 export default {
   setup() {
+    const store = useStore()
 
+    function clickDetails() {
+      const refCard = store.getters.getStyleHeightCard
+
+      store.getters.getIsToggleDetails === ''
+        ? (store.commit('setIsToggleDetails', 'active'),
+          (refCard.style.height = refCard.scrollHeight + 20 + 'px'))
+        : (store.commit('setIsToggleDetails', ''),
+          (refCard.style.height = '0px'))
+    }
+
+    return {
+      clickDetails,
+    }
   },
   components: {
     CardInfo,
-  }
+  },
 }
 </script>
 
-<style>
-
-
-.project-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  margin: 20px 0;
-}
-
-.project-item-inner {
-  border: 6px solid var(--bg-black-100);
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  max-width: 80%;
-}
-
-.project-item-inner img {
-  max-width: 100%;
-}
-
-.btn-details {
-  justify-content: space-between;
-}
-
-.group-btn {
-  display: flex;
-}
-</style>
+<style></style>
