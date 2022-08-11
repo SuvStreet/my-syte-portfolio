@@ -17,7 +17,7 @@ export default createStore({
     },
     setStyleHeightCard(state, payload) {
       state.styleHeightCard = payload
-    }
+    },
   },
   actions: {
   },
@@ -30,7 +30,7 @@ export default createStore({
     },
     getStyleHeightCard(state) {
       return state.styleHeightCard
-    }
+    },
   },
   modules: {
     styleSwitcher,

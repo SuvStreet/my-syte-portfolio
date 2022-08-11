@@ -80,7 +80,18 @@
 
 
 .btn-details
-  justify-content: space-between
+  justify-content: flex-start
+
+  & .btn
+    padding: 11px 16px
+    margin-right: 10px
+
+    & span i
+      transition: all 1s ease-in-out
+    
+    & .isOpen i 
+      transition: all 1s ease-in-out
+      transform: rotate(45deg)
 
 .group-btn 
   display: flex

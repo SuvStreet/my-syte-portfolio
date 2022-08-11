@@ -42,9 +42,9 @@
     </div>
     <div class="main-content">
       <router-view v-slot="{ Component }">
-        <transition name="fade">
+        <!-- <transition name="fade"> -->
           <component :is="Component" @scroll="isClose" :class="isToggleNav" />
-        </transition>
+        <!-- </transition> -->
       </router-view>
     </div>
   </div>
