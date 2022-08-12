@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div class="main-container" @click="isClose">
     <div :class="['aside', isToggleNav]">
       <div class="logo">
         <router-link to="/"><span>Suv</span>Street </router-link>
@@ -43,7 +43,11 @@
     <div class="main-content">
       <router-view v-slot="{ Component }">
         <!-- <transition name="fade"> -->
-          <component :is="Component" @scroll="isClose" :class="isToggleNav" />
+        <component 
+          :is="Component" 
+          @scroll="isClose"
+          :class="isToggleNav" 
+        />
         <!-- </transition> -->
       </router-view>
     </div>
@@ -63,6 +67,8 @@ export default {
       if (store.getters['styleSwitcher/isOpen'] === true) {
         store.commit('styleSwitcher/toggle')
       }
+
+      console.log('')
     }
 
     function isNav() {
