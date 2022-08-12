@@ -1,5 +1,5 @@
 <template>
-  <CardInfo />
+  <ProjectInfo />
 
   <!-- Две кнопки открыть детали проекта и закрыть сам проект -->
   <div class="row padd-15 btn-details">
@@ -14,18 +14,9 @@
     </button>
   </div>
 
-  <div class="project-item">
-    <button class="btn">next</button>
+  <!-- Слайдер -->
 
-    <div class="project-item-inner shadow-dark">
-      <img
-        src="https://api.lorem.space/image/face?w=1920&h=1080"
-        alt="picture"
-      />
-    </div>
-
-    <button class="btn">past</button>
-  </div>
+  <ProjectSlider />
 </template>
 
 <script>
@@ -33,7 +24,8 @@ import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 import { ref } from '@vue/reactivity'
 
-import CardInfo from './CardInfo.vue'
+import ProjectInfo from './ProjectInfo.vue'
+import ProjectSlider from './ProjectSlider.vue'
 
 export default {
   setup() {
@@ -65,7 +57,8 @@ export default {
     }
   },
   components: {
-    CardInfo,
+    ProjectInfo,
+    ProjectSlider,
   },
 }
 </script>

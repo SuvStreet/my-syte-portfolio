@@ -61,23 +61,82 @@
 
 // стили project
 
-.project-item
-  display: flex
-  justify-content: center
-  align-items: center
-  max-width: 100%
-  margin: 20px 0
+.slider
+  width: 100%
+  margin: 20px auto
 
-.project-item-inner 
-  border: 6px solid var(--bg-black-100)
-  border-radius: 10px
-  overflow: hidden
-  cursor: pointer
-  max-width: 80%
-  
-  & img
-    max-width: 100%
+  & .slider-container
+    display: flex
+    border: 6px solid var(--bg-black-100)
+    border-radius: 10px
+    overflow: hidden
+    
+    & img
+      object-fit: cover
+      max-width: 100%
+      transition: all 0.5s ease-in-out
 
+  & .slider-btn
+    position: absolute
+    width: 100%
+    height: calc(100% - 44px)
+    top: 0
+    margin: 22px 0 
+
+    & .next,
+    & .past
+      font-size: 16px
+      font-weight: 500
+      padding: 12px 35px
+      color: var(--text-black-700)
+      cursor: pointer
+      border: none
+      height: 100%
+      background: transparent
+      border-radius: 6px
+
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+        transition: all .3s ease-in-out
+
+      & i
+        font-size: 40px
+        color: var(--skin-color)
+        position: relative
+        z-index: 1 
+        transition: all .3s ease-in-out
+
+    & .next
+      position: absolute
+      right: 0
+
+      &::after
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, var(--bg-black-100) 100%)
+        
+      &:hover::after
+          opacity: 1
+
+      &:hover i
+        transform: scale(1.9)
+
+    & .past
+      position: absolute
+      left: 0
+
+      &::after
+        background: linear-gradient(270deg, rgba(255,255,255,0) 0%, var(--bg-black-100) 100%)
+      
+      &:hover::after
+          opacity: 1
+
+      &:hover i
+        transform: scale(1.9)
 
 .btn-details
   justify-content: flex-start
@@ -119,7 +178,7 @@
 
 .project-tag
   font-size: 15px
-  color: var(--text-black-900)
+  color: var(--text-black-700)
   margin-bottom: 30px
   margin-top: -30px
   
@@ -149,4 +208,4 @@
 .project-title p,
 .project-tech-title ul
   font-size: 15px
-  color: var(--text-black-900)
+  color: var(--text-black-700)
