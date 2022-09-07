@@ -62,7 +62,7 @@
 // стили project
 
 .slider
-  width: 100%
+  // width: 100%
   margin: 20px auto
 
   & .slider-container
@@ -70,10 +70,15 @@
     border: 6px solid var(--bg-black-100)
     border-radius: 10px
     overflow: hidden
-    
+
+    & .slider-inner
+      flex: 1 0 100%
+      display: flex
+      justify-content: center
+      align-items: center
+
     & img
-      object-fit: cover
-      max-width: 100%
+      width: 100%
       transition: all 0.5s ease-in-out
 
   & .slider-btn
@@ -172,10 +177,6 @@
   visibility: visible
   opacity: 1
 
-.project-content 
-  flex: 0 0 100%
-  max-width: 100%
-
 .project-tag
   font-size: 15px
   color: var(--text-black-700)
@@ -197,7 +198,7 @@
     color: var(--text-black-900)
     
   & .project-title
-  flex: 3 0 70%
+    flex: 1 0 70%
 
 
 .project-title,

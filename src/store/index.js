@@ -1,6 +1,7 @@
 import { createStore } from 'vuex'
 import styleSwitcher from './modules/styleSwitcher.module'
 import i18n from './modules/i18n.module'
+import portfolio from './modules/portfolio.module'
 
 export default createStore({
   state: {
@@ -19,8 +20,7 @@ export default createStore({
       state.styleHeightCard = payload
     },
   },
-  actions: {
-  },
+  actions: {},
   getters: {
     getIsToggleNav(state) {
       return state.isToggleNav
@@ -35,5 +35,6 @@ export default createStore({
   modules: {
     styleSwitcher,
     i18n,
-  }
+    portfolio,
+  },
 })

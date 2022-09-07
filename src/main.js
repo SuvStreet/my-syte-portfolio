@@ -6,4 +6,8 @@ import i18n from './plugins/i18n'
 
 import './style/style.sass'
 
-createApp(App).use(i18n).use(store).use(router).mount('#app')
+createApp(App)
+  .use(i18n)
+  .use(store)
+  .use(router)
+  .mount('#app')

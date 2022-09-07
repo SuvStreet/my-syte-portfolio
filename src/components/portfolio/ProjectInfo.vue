@@ -1,14 +1,14 @@
 <template>
   <div :class="['project-card', $store.getters.getIsToggleDetails]" ref="card">
     <div class="section-title">
-      <h2>Name Project</h2>
+      <h2>{{ info.title[$store.getters['i18n/getLanguage']] }}</h2>
     </div>
+
+    <!-- {{ title }} -->
 
     <div class="row">
       <div class="project-tag padd-15">
-        <small>#Category/hashTag</small>
-        <small>#Category/hashTag</small>
-        <small>#Category/hashTag</small>
+        <small v-for="(tag, id) in info.hash_tag" :key="id"> #{{ tag }} </small>
       </div>
     </div>
 
@@ -17,24 +17,25 @@
         <div class="project-title">
           <h3>Description Project:</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure,
-            nesciunt ducimus debitis ut neque laborum nulla earum sed
-            laudantium? Impedit est cum veniam libero optio ex voluptatibus
-            autem et. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repudiandae ea iste totam amet officiis qui expedita mollitia ullam
-            vero. Numquam tempore commodi perferendis dolores dolorum quas, nisi
-            ratione eveniet adipisci. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit.
+            {{ info.description[$store.getters['i18n/getLanguage']] }}
           </p>
         </div>
         <div class="project-tech-title">
           <h3>Info Project:</h3>
 
           <ul>
-            <li><strong>Date</strong> - 2020</li>
-            <li><strong>Client</strong> - SuvStreet</li>
-            <li><strong>Tools</strong> - html, sass, js, vue</li>
-            <li><strong>Web</strong> - www.suvstreet.com</li>
+            <li v-for="(dataProject, id) in info.info" :key="id">
+              <strong>
+                {{ dataProject.title[$store.getters['i18n/getLanguage']] }}
+              </strong>
+              -
+              <template v-if="dataProject.description.indexOf('https') !== 0">
+                {{ dataProject.description }}
+              </template>
+              <a v-else :href="dataProject.description" target="_blank">
+                {{ dataProject.title[$store.getters['i18n/getLanguage']] }}
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -44,10 +45,11 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useStore } from 'vuex'
 
 export default {
+  props: ['info'],
   setup() {
     const store = useStore()
     const card = ref(null)

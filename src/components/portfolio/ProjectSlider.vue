@@ -2,13 +2,9 @@
   <div class="row">
     <div class="slider">
       <div class="slider-container shadow-dark" ref="sliderContainer">
-        <img
-          :style="classTransforms"
-          :src="picture"
-          alt="picture"
-          v-for="img in volumePicture"
-          :key="img"
-        />
+        <div class="slider-inner" v-for="(img, id) in picture" :key="id">
+          <img :style="classTransforms" :src="img" alt="picture" />
+        </div>
       </div>
       <div class="slider-btn">
         <button class="past" @click="postPicture">
@@ -24,12 +20,15 @@
 
 <script>
 import { ref } from '@vue/reactivity'
+import { onMounted } from '@vue/runtime-core'
+import { useStore } from 'vuex'
 
 export default {
-  setup() {
-    const picture = ref('https://api.lorem.space/image/face?w=1920&h=1080')
-    const volumePicture = ref(3)
+  props: ['photo'],
+  setup(props) {
+    const picture = ref(props.photo)
     const sliderContainer = ref(null)
+    const width = ref(0)
     const count = ref(0)
     const classTransforms = ref('')
 
@@ -39,21 +38,24 @@ export default {
     }
 
     function rollSlider() {
-      let width = sliderContainer.value.offsetWidth
-
       classTransforms.value = `transform: translate(-${
-        (width - 12) * count.value
+        (width.value - 12) * count.value
       }px)`
 
-      if (count.value === volumePicture.value) {
+      if (count.value === props.photo.length) {
         classTransforms.value = `transform: translate(0px)`
         count.value = 0
       }
     }
 
+    onMounted(() => {
+      window.addEventListener('resize', rollSlider)
+      width.value = sliderContainer.value.offsetWidth
+    })
+
     function postPicture() {
       if (count.value === 0) {
-        count.value = volumePicture.value
+        count.value = props.photo.length
       }
       count.value--
       rollSlider()
@@ -61,7 +63,6 @@ export default {
 
     return {
       picture,
-      volumePicture,
       nextPicture,
       postPicture,
       sliderContainer,

@@ -7,14 +7,17 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.21.1",
-    "typed.js": "^2.0.12",
-    "vue": "^3.2.31",
-    "vue-i18n": "^9.1.9",
-    "vue-router": "^4.0.12",
+    "axios": "^0.27.2",
+    "core-js": "^3.25.0",
+    "firebase": "^9.9.4",
+    "skeleton-elements": "^4.0.0",
+    "vue": "^3.2.38",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.1.5",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.5.0",
     "@vue/cli-plugin-babel": "~5.0.1",
     "@vue/cli-plugin-router": "~5.0.1",
     "@vue/cli-plugin-vuex": "~5.0.1",

@@ -31,6 +31,7 @@ const routes = [
       {
         path: ':id',
         name: 'project',
+        props: true,
         component: () => import('../components/portfolio/Project.vue'),
       }
     ]

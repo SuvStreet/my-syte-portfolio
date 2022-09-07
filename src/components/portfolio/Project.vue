@@ -1,22 +1,27 @@
 <template>
-  <ProjectInfo />
+  <TheLoader v-if="!projectInfo" />
+  <template v-else>
+    <ProjectInfo :info=projectInfo />
 
-  <!-- Две кнопки открыть детали проекта и закрыть сам проект -->
-  <div class="row padd-15 btn-details">
-    <button class="btn" @click="clickDetails">
-      More details
-      <span :class="[styleRotate ? 'isOpen' : '']"
-        ><i class="fa-solid fa-plus"></i
-      ></span>
-    </button>
-    <button class="btn" @click="clickClose">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-  </div>
+    <!-- {{projectInfo}} -->
 
-  <!-- Слайдер -->
+    <!-- Две кнопки открыть детали проекта и закрыть сам проект -->
+    <div class="row padd-15 btn-details">
+      <button class="btn" @click="clickDetails">
+        More details
+        <span :class="[styleRotate ? 'isOpen' : '']">
+          <i class="fa-solid fa-plus"></i>
+        </span>
+      </button>
+      <button class="btn" @click="clickClose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
 
-  <ProjectSlider />
+    <!-- Слайдер -->
+
+    <ProjectSlider :photo=projectInfo.photo_slider />
+  </template>
 </template>
 
 <script>
@@ -26,12 +31,20 @@ import { ref } from '@vue/reactivity'
 
 import ProjectInfo from './ProjectInfo.vue'
 import ProjectSlider from './ProjectSlider.vue'
+import TheLoader from '../TheLoader.vue'
+
+import { computed } from '@vue/runtime-core'
 
 export default {
-  setup() {
+  props: ['id'],
+  setup({ id }) {
     const store = useStore()
     const router = useRouter()
     const styleRotate = ref(false)
+
+    const projectInfo = computed(() =>
+      store.getters['portfolio/getProject'](id)
+    )
 
     function clickDetails() {
       const refCard = store.getters.getStyleHeightCard
@@ -54,11 +67,13 @@ export default {
       clickDetails,
       clickClose,
       styleRotate,
+      projectInfo,
     }
   },
   components: {
     ProjectInfo,
     ProjectSlider,
+    TheLoader,
   },
 }
 </script>

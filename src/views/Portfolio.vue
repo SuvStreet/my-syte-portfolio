@@ -15,25 +15,25 @@
           </div>
         </div>
 
-        <TheSort />
+        <TheLoader v-if="!$store.getters['portfolio/loader']" />
 
-        <div class="row">
-          <div
-            class="portfolio-item padd-15"
-            v-for="id in volumePortfolio"
-            :key="id"
-            @click="clickProject(id)"
-          >
-            <div class="portfolio-item-inner shadow-dark">
-              <div class="portfolio-item-bg">
-                <div class="portfolio-img">
-                  <img :src="picture" alt="poster" />
-                </div>
-                <h2 class="portfolio-title">Lorem, ipsum dolor.</h2>
-              </div>
+        <template v-else>
+          <TheSort />
+
+          <div class="row">
+            <div
+              class="portfolio-item padd-15"
+              v-for="project in listProjects"
+              :key="project.idx"
+              @click="clickProject(project.idx)"
+            >
+              <ProjectCard
+                :poster="project.avatar"
+                :title="titleProject(project.idx)"
+              />
             </div>
           </div>
-        </div>
+        </template>
       </template>
     </div>
   </div>
@@ -42,14 +42,25 @@
 <script>
 import { ref } from '@vue/reactivity'
 import { useRouter } from 'vue-router'
+import { computed, onMounted, watch } from '@vue/runtime-core'
+import { useStore } from 'vuex'
 
 import TheSort from '../components/TheSort.vue'
+import TheLoader from '../components/TheLoader.vue'
+import ProjectCard from '../components/portfolio/ProjectCard.vue'
 
 export default {
   setup() {
     const picture = ref('https://api.lorem.space/image/watch?w=150&h=220')
     const volumePortfolio = ref(3)
     const router = useRouter()
+    const store = useStore()
+
+    const listProjects = computed(() => store.getters['portfolio/getProjects'])
+
+    onMounted(() => {
+      store.dispatch('portfolio/loadingAllProjects')
+    })
 
     function clickProject(id) {
       router.push({
@@ -60,14 +71,23 @@ export default {
       })
     }
 
+    function titleProject(id) {
+      const language = store.getters['i18n/getLanguage']
+      return listProjects.value[id].title[language]
+    }
+
     return {
       picture,
       volumePortfolio,
       clickProject,
+      listProjects,
+      titleProject,
     }
   },
   components: {
     TheSort,
+    TheLoader,
+    ProjectCard,
   },
 }
 </script>
