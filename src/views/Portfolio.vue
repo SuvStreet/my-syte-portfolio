@@ -1,23 +1,23 @@
 <template>
   <div class="portfolio section">
     <div class="container">
-      <router-view v-if="$route.params.id"></router-view>
+      <TheLoader v-if="$store.getters['portfolio/loader']" />
 
       <template v-else>
-        <div class="row">
-          <div class="section-title padd-15">
-            <h2>Портфолио</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="portfolio-heading padd-15">
-            <h2>Мои последние проекты :</h2>
-          </div>
-        </div>
-
-        <TheLoader v-if="!$store.getters['portfolio/loader']" />
+        <router-view v-if="$route.params.id"></router-view>
 
         <template v-else>
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>{{ $t('portfolio.title') }}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="portfolio-heading padd-15">
+              <h2>{{ $t('portfolio.text') }} :</h2>
+            </div>
+          </div>
+
           <TheSort />
 
           <div class="row">

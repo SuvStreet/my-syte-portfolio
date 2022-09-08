@@ -19,5 +19,10 @@
     "services": "Services",
     "portfolio": "Portfolio",
     "contacts": "Contacts"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "text": "My latest projects",
+    "sort": ["All", "Website", "Elements", "Loading"]
   }
 }

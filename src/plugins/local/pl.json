@@ -19,5 +19,10 @@
     "services": "Usługi",
     "portfolio": "Portfolio",
     "contacts": "Kontakt"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "text": "Moje najnowsze projekty",
+    "sort": ["Wszyscy", "Strona", "Element", "Ładowanie"]
   }
 }
