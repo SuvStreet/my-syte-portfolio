@@ -8,7 +8,7 @@
     <!-- Две кнопки открыть детали проекта и закрыть сам проект -->
     <div class="row padd-15 btn-details">
       <button class="btn" @click="clickDetails">
-        More details
+        {{ $t('project.openDetail') }}
         <span :class="[styleRotate ? 'isOpen' : '']">
           <i class="fa-solid fa-plus"></i>
         </span>

@@ -15,13 +15,13 @@
     <div class="row">
       <div class="project-content padd-15">
         <div class="project-title">
-          <h3>Description Project:</h3>
+          <h3>{{ $t('projectInfo.description') }}:</h3>
           <p>
             {{ info.description[$store.getters['i18n/getLanguage']] }}
           </p>
         </div>
         <div class="project-tech-title">
-          <h3>Info Project:</h3>
+          <h3>{{ $t('projectInfo.info') }}:</h3>
 
           <ul>
             <li v-for="(dataProject, id) in info.info" :key="id">

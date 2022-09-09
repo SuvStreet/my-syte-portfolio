@@ -3,11 +3,12 @@
     <div class="portfolio-filter padd-15">
       <button
         class="filter-btn shadow-dark"
-        v-for="(tag, name, id) in tagBtn"
+        v-for="(name, id) in sortBtn"
         :key="id"
-        @click="setActiveFilter(tag)"
-        :class="isFilter === tag ? 'active' : ''"
+        @click="setActiveFilter(id)"
+        :class="isFilter === id ? 'active' : ''"
       >
+        <!-- {{ $t(`portfolio.sort[${id}]`) }} -->
         {{ name }}
       </button>
     </div>
@@ -16,17 +17,14 @@
 
 <script>
 import { ref } from '@vue/reactivity'
+import { useI18n } from 'vue-i18n'
+import { computed } from '@vue/runtime-core'
 
 export default {
   setup() {
-    const isFilter = ref('all')
-
-    const tagBtn = {
-      'Все': 'all',
-      'Сайт': 'web',
-      'Элементы': 'details',
-      'Загрузка': 'loading',
-    }
+    const isFilter = ref(0)
+    const t = useI18n()
+    const sortBtn = computed(() => t.messages.value[t.locale.value].portfolio.sort)
 
     const setActiveFilter = (value) => {
       console.log('value', value)
@@ -35,8 +33,8 @@ export default {
 
     return {
       setActiveFilter,
-      tagBtn,
       isFilter,
+      sortBtn,
     }
   },
 }
