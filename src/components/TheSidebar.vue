@@ -20,10 +20,18 @@
             {{ $t('menu.about') }}
           </router-link>
         </li>
+
         <li @click="isNav">
           <router-link to="/service">
             <i class="fa fa-cog"></i>
-            {{ $t('menu.services') }}
+            Услуги
+          </router-link>
+        </li>
+
+        <li @click="isNav">
+          <router-link to="/experience">
+            <i class="fa fa-brain"></i>
+            {{ $t('menu.experience') }}
           </router-link>
         </li>
         <li @click="isNav">
@@ -43,11 +51,7 @@
     <div class="main-content">
       <router-view v-slot="{ Component }">
         <transition name="fade">
-        <component 
-          :is="Component" 
-          @scroll="isClose"
-          :class="isToggleNav" 
-        />
+          <component :is="Component" @scroll="isClose" :class="isToggleNav" />
         </transition>
       </router-view>
     </div>
@@ -77,7 +81,7 @@ export default {
     return {
       isClose,
       isNav,
-      isToggleNav: computed(() => store.getters.getIsToggleNav)
+      isToggleNav: computed(() => store.getters.getIsToggleNav),
     }
   },
 }

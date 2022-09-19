@@ -16,9 +16,12 @@
   "menu": {
     "home": "Home",
     "about": "About",
-    "services": "Services",
+    "experience": "Experience",
     "portfolio": "Portfolio",
     "contacts": "Contacts"
+  },
+  "experience": {
+    "title": "Experience"
   },
   "portfolio": {
     "title": "Portfolio",

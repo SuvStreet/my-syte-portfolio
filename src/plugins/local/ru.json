@@ -16,9 +16,12 @@
   "menu": {
     "home": "Главная",
     "about": "Обо мне",
-    "services": "Услуги",
+    "experience": "Опыт",
     "portfolio": "Портфолио",
     "contacts": "Контакты"
+  },
+  "experience": {
+    "title": "Опыт"
   },
   "portfolio": {
     "title": "Портфолио",
@@ -29,11 +32,11 @@
     "openDetail": "Больше деталей"
   },
   "projectInfo": {
-    "description" : "Описание проекта",
-    "info" : "Информация о проекте",
-    "technology" : "Технологии",
-    "date" : "Дата",
-    "website" : "Веб-сайт",
-    "github" : "GitHub"
+    "description": "Описание проекта",
+    "info": "Информация о проекте",
+    "technology": "Технологии",
+    "date": "Дата",
+    "website": "Веб-сайт",
+    "github": "GitHub"
   }
 }

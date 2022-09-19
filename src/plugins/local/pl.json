@@ -16,9 +16,12 @@
   "menu": {
     "home": "Strona główna",
     "about": "O mnie",
-    "services": "Usługi",
+    "experience": "Doświadczenie",
     "portfolio": "Portfolio",
     "contacts": "Kontakt"
+  },
+  "experience": {
+    "title": "Doświadczenie"
   },
   "portfolio": {
     "title": "Portfolio",
