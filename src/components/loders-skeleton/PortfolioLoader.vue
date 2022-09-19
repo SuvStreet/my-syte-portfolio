@@ -42,15 +42,14 @@
     ></skeleton-block>
   </div> -->
 
-  <div class="block-skeleton">
-    <skeleton-block
-      v-for="(block, id) in projectBlock"
-      :key="id"
-      class="skeleton img-skeleton"
-      effect="wave"
-      :borderRadius="radius"
-    >
-    </skeleton-block>
+  <div class="row">
+    <div class="block-skeleton padd-15" v-for="id in projectBlock" :key="id">
+      <skeleton-block
+        class="skeleton img-skeleton"
+        effect="wave"
+        :borderRadius="radius"
+      ></skeleton-block>
+    </div>
   </div>
 </template>
 
@@ -96,14 +95,13 @@ export default {
 .text-skeleton {
   width: 280px;
   height: 36px;
-  margin-top: 55px;
+  margin: 55px 0 50px 0;
 }
 
 .block-skeleton {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 30px;
+  min-width: 340px;
+  flex: 1 0 33.33%;
 }
 
 .sort-skeleton {
@@ -117,12 +115,7 @@ export default {
 }
 
 .img-skeleton {
-  width: 262px;
-  height: 130px;
-  margin-top: 50px;
-}
-
-.img-skeleton:not(:last-child) {
-  margin-right: 10px;
+  min-width: 340px;
+  height: 180px;
 }
 </style>
