@@ -20,17 +20,27 @@
 
 <script>
 import { ref } from '@vue/reactivity'
-import { onMounted } from '@vue/runtime-core'
+import { computed, onMounted, watch } from '@vue/runtime-core'
 import { useStore } from 'vuex'
 
 export default {
   props: ['photo'],
   setup(props) {
+    const store = useStore()
     const picture = ref(props.photo)
     const sliderContainer = ref(null)
     const width = ref(0)
     const count = ref(0)
     const classTransforms = ref('')
+
+    onMounted(() => {
+      window.addEventListener('resize', rollSlider)
+    })
+
+    // watch(width, (old, newV) => {
+    //   console.log('old', old)
+    //   console.log('new', newV)
+    // })
 
     function nextPicture() {
       count.value++
@@ -38,6 +48,10 @@ export default {
     }
 
     function rollSlider() {
+      if (sliderContainer.value.offsetWidth !== null) {
+        width.value = sliderContainer.value.offsetWidth
+      }
+
       classTransforms.value = `transform: translate(-${
         (width.value - 12) * count.value
       }px)`
@@ -47,11 +61,6 @@ export default {
         count.value = 0
       }
     }
-
-    onMounted(() => {
-      window.addEventListener('resize', rollSlider)
-      width.value = sliderContainer.value.offsetWidth
-    })
 
     function postPicture() {
       if (count.value === 0) {

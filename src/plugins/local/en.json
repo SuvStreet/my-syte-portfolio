@@ -30,6 +30,9 @@
   },
   "projectInfo": {
     "description" : "Project Description",
-    "info" : "Project Information"
+    "info" : "Project Information",
+    "technology" : "Technologies",
+    "date" : "Date",
+    "website" : "Website"
   }
 }

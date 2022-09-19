@@ -55,13 +55,12 @@
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
 import { useStore } from 'vuex'
+import { computed } from '@vue/runtime-core'
 
 export default {
   setup() {
     const store = useStore()
-    const isToggleNav = ref('')
 
     function isClose() {
       if (store.getters['styleSwitcher/isOpen'] === true) {
@@ -73,14 +72,12 @@ export default {
       store.getters.getIsToggleNav === ''
         ? store.commit('setIsToggleNav', 'open')
         : store.commit('setIsToggleNav', '')
-
-      isToggleNav.value = store.getters.getIsToggleNav
     }
 
     return {
       isClose,
       isNav,
-      isToggleNav
+      isToggleNav: computed(() => store.getters.getIsToggleNav)
     }
   },
 }

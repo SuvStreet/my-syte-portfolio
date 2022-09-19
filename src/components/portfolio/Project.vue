@@ -1,11 +1,10 @@
 <template>
-  <TheLoader v-if="!projectInfo" />
+  <ProjectLoader v-if="!projectInfo" />
   <template v-else>
-    <ProjectInfo :info=projectInfo />
-
-    <!-- {{projectInfo}} -->
+    <ProjectInfo :info="projectInfo" />
 
     <!-- Две кнопки открыть детали проекта и закрыть сам проект -->
+
     <div class="row padd-15 btn-details">
       <button class="btn" @click="clickDetails">
         {{ $t('project.openDetail') }}
@@ -20,7 +19,7 @@
 
     <!-- Слайдер -->
 
-    <ProjectSlider :photo=projectInfo.photo_slider />
+    <ProjectSlider :photo="projectInfo.photo_slider" />
   </template>
 </template>
 
@@ -28,12 +27,11 @@
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 import { ref } from '@vue/reactivity'
+import { computed } from '@vue/runtime-core'
 
 import ProjectInfo from './ProjectInfo.vue'
 import ProjectSlider from './ProjectSlider.vue'
-import TheLoader from '../TheLoader.vue'
-
-import { computed } from '@vue/runtime-core'
+import ProjectLoader from '../loders-skeleton/ProjectLoader.vue'
 
 export default {
   props: ['id'],
@@ -73,7 +71,7 @@ export default {
   components: {
     ProjectInfo,
     ProjectSlider,
-    TheLoader,
+    ProjectLoader,
   },
 }
 </script>

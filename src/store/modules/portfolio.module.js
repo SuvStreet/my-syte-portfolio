@@ -38,11 +38,9 @@ export default {
   },
   getters: {
     getProjects(state) {
-      // console.log('state.projects(getProjects)', state.projects)
       return state.projects
     },
-    getProject(state, getters) {
-      // console.log('payload', getters.getProjects)
+    getProject(_, getters) {
       return (idx) => getters.getProjects.find(project => project.idx === idx)
     },
     loader({ loader }) {

@@ -1,10 +1,10 @@
 <template>
   <div class="portfolio section">
     <div class="container">
-      <TheLoader v-if="$store.getters['portfolio/loader']" />
+      <router-view v-if="$route.params.id"></router-view>
 
       <template v-else>
-        <router-view v-if="$route.params.id"></router-view>
+        <PortfolioLoader v-if="$store.getters['portfolio/loader']" />
 
         <template v-else>
           <div class="row">
@@ -18,7 +18,10 @@
             </div>
           </div>
 
-          <TheSort />
+          <!-- TODO: сделать созтировку -->
+          <!-- <TheSort /> -->
+
+          <!-- TODO: сделать поиск -->
 
           <div class="row">
             <div
@@ -46,7 +49,7 @@ import { computed, onMounted, watch } from '@vue/runtime-core'
 import { useStore } from 'vuex'
 
 import TheSort from '../components/TheSort.vue'
-import TheLoader from '../components/TheLoader.vue'
+import PortfolioLoader from '../components/loders-skeleton/PortfolioLoader.vue'
 import ProjectCard from '../components/portfolio/ProjectCard.vue'
 
 export default {
@@ -63,6 +66,14 @@ export default {
     })
 
     function clickProject(id) {
+      if (store.getters.getIsToggleNav === 'open') {
+        console.log(
+          'store.getters.getIsToggleNav',
+          store.getters.getIsToggleNav
+        )
+        store.commit('setIsToggleNav', '')
+      }
+
       router.push({
         name: 'project',
         params: {
@@ -86,7 +97,7 @@ export default {
   },
   components: {
     TheSort,
-    TheLoader,
+    PortfolioLoader,
     ProjectCard,
   },
 }

@@ -30,6 +30,10 @@
   },
   "projectInfo": {
     "description" : "Описание проекта",
-    "info" : "Информация о проекте"
+    "info" : "Информация о проекте",
+    "technology" : "Технологии",
+    "date" : "Дата",
+    "website" : "Веб-сайт",
+    "github" : "GitHub"
   }
 }

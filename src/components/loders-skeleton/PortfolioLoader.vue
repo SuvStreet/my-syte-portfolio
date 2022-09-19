@@ -2,49 +2,55 @@
   <skeleton-block
     class="skeleton title-skeleton"
     effect="wave"
-  ></skeleton-block>
+    :borderRadius="radius"
+  >
+  </skeleton-block>
   <skeleton-block
     class="skeleton title-before-skeleton"
     effect="wave"
-  ></skeleton-block>
+    :borderRadius="radius"
+  >
+  </skeleton-block>
   <skeleton-block
     class="skeleton title-after-skeleton"
     effect="wave"
+    :borderRadius="radius"
+  >
+  </skeleton-block>
+  <skeleton-block
+    class="skeleton text-skeleton"
+    effect="wave"
+    :borderRadius="radius"
   ></skeleton-block>
-  <skeleton-block class="skeleton text-skeleton" effect="wave"></skeleton-block>
+
+  <!-- <div class="block-skeleton">
+    <skeleton-block
+      class="skeleton sort-skeleton"
+      effect="wave"
+    ></skeleton-block>
+    <skeleton-block
+      class="skeleton sort-skeleton"
+      effect="wave"
+    ></skeleton-block>
+    <skeleton-block
+      class="skeleton sort-skeleton"
+      effect="wave"
+    ></skeleton-block>
+    <skeleton-block
+      class="skeleton sort-skeleton"
+      effect="wave"
+    ></skeleton-block>
+  </div> -->
 
   <div class="block-skeleton">
     <skeleton-block
-      class="skeleton sort-skeleton"
-      effect="wave"
-    ></skeleton-block>
-    <skeleton-block
-      class="skeleton sort-skeleton"
-      effect="wave"
-    ></skeleton-block>
-    <skeleton-block
-      class="skeleton sort-skeleton"
-      effect="wave"
-    ></skeleton-block>
-    <skeleton-block
-      class="skeleton sort-skeleton"
-      effect="wave"
-    ></skeleton-block>
-  </div>
-
-  <div class="block-skeleton">
-    <skeleton-block
+      v-for="(block, id) in projectBlock"
+      :key="id"
       class="skeleton img-skeleton"
       effect="wave"
-    ></skeleton-block>
-    <skeleton-block
-      class="skeleton img-skeleton"
-      effect="wave"
-    ></skeleton-block>
-    <skeleton-block
-      class="skeleton img-skeleton"
-      effect="wave"
-    ></skeleton-block>
+      :borderRadius="radius"
+    >
+    </skeleton-block>
   </div>
 </template>
 
@@ -53,6 +59,12 @@ import { SkeletonBlock } from 'skeleton-elements/vue'
 import 'skeleton-elements/css'
 
 export default {
+  setup() {
+    return {
+      projectBlock: 6,
+      radius: '5px',
+    }
+  },
   components: {
     SkeletonBlock,
   },
@@ -61,7 +73,6 @@ export default {
 
 <style scoped>
 .skeleton {
-  border-radius: 5px;
   --skeleton-color: var(--bg-black-100);
 }
 
@@ -90,6 +101,9 @@ export default {
 
 .block-skeleton {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sort-skeleton {

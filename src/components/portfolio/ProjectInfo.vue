@@ -4,8 +4,6 @@
       <h2>{{ info.title[$store.getters['i18n/getLanguage']] }}</h2>
     </div>
 
-    <!-- {{ title }} -->
-
     <div class="row">
       <div class="project-tag padd-15">
         <small v-for="(tag, id) in info.hash_tag" :key="id"> #{{ tag }} </small>
@@ -29,12 +27,16 @@
                 {{ dataProject.title[$store.getters['i18n/getLanguage']] }}
               </strong>
               -
-              <template v-if="dataProject.description.indexOf('https') !== 0">
-                {{ dataProject.description }}
-              </template>
-              <a v-else :href="dataProject.description" target="_blank">
+              <a
+                v-if="dataProject.description.indexOf('https') !== -1"
+                :href="dataProject.description"
+                target="_blank"
+              >
                 {{ dataProject.title[$store.getters['i18n/getLanguage']] }}
               </a>
+              <template v-else>
+                {{ dataProject.description }}
+              </template>
             </li>
           </ul>
         </div>
@@ -45,7 +47,7 @@
 </template>
 
 <script>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useStore } from 'vuex'
 
 export default {
