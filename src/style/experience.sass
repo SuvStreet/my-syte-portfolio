@@ -1,9 +1,14 @@
+:root
+  --box-shadow: 0 0 20px rgba(48, 46, 77, 0.15)
+
+.dark
+  --box-shadow: 0 0 20px rgba(255, 255, 255, 0.15)
+
 .experience 
   
   & .container
     padding-bottom: 40px
     
-
   & .experience-item
     margin-bottom: 30px
     flex: 1 0 33.33%
@@ -15,41 +20,92 @@
       padding: 30px 15px
       text-align: center
       transition: all .3s ease
+      position: relative
+      display: flex
       flex-direction: column
+      justify-content: center
+      align-items: center
 
-      & h4
-        font-size: 18px
-        margin-bottom: 15px
-        color: var(--text-black-900)
-        font-weight: 700
-        text-transform: capitalize
+      &:hover
+        box-shadow: var(--box-shadow)
 
-      & p
+        & .icon
+          background: var(--skin-color)
+          transform: translateY(-28%)
+
+          & svg
+            width: 60px
+            height: 60px
+            transform: translateY(30%)
+
+        & .text h2, small p
+          opacity: 0
+
+      & .icon
+        width: 96px
+        height: 96px
+        border-radius: 50%
+        transition: all .3s ease
+
+        & svg
+          width: 96px
+          height: 96px
+          transition: all .3s ease
+
+      & .text h2, small p
+        transition: all .3s ease
+
+      & .circle
+        width: 200px
+        height: 200px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 40px
+
+        & .points
+          width: 3px
+          height: 15px
+          background: #0007
+          position: absolute
+          border-radius: 3px
+          transform: rotate(calc(var(--i) * var(--rot))) translateY(-100px)
+          transition: all .3s ease
+
+          &.marked
+            animation: glow 0.04s linear forwards
+            animation-delay: calc(var(--i) * 0.05s)
+
+      & .text
+        position: absolute
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        color: var(--text-black-700)
+
+        & h2
+          font-size: 18px
+          font-weight: 400
+          letter-spacing: 1px
+          color: var(--text-black-900)
+
+        & small 
+          font-size: 18px
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+
+      & .direction p
         font-size: 16px
         color: var(--text-black-700)
         line-height: 25px
 
-      &:hover
-        box-shadow: 0 0 20px rgba(48, 46, 77, 0.15)
-
-        & .icon
-          background: var(--skin-color)
-
-          & .fa
-            font-size: 25px
-            color: #fff
-
-      & .icon
-        height: 60px
-        width: 60px
-        border-radius: 50%
-        display: block
-        margin: 0 auto 30px
-        text-align: center
-        transition: all .3s ease
-
-        & .fa
-          font-size: 40px
-          line-height: 60px
-          color: var(--skin-color)
-          transition: all .3s ease
+@keyframes glow
+  0% 
+    background: #0007
+    box-shadow: none
+  100% 
+    background: var(--skin-color)
+    box-shadow: 0 0 10px var(--skin-color)
