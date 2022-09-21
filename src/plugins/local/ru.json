@@ -20,6 +20,9 @@
     "portfolio": "Портфолио",
     "contacts": "Контакты"
   },
+  "about": {
+    "title": "Обо мне"
+  },
   "experience": {
     "title": "Опыт"
   },
@@ -38,5 +41,8 @@
     "date": "Дата",
     "website": "Веб-сайт",
     "github": "GitHub"
+  },
+  "contact": {
+    "title": "Контакты"
   }
 }

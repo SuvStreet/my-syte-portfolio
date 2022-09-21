@@ -1,12 +1,6 @@
 <template>
-  <section class="experience section">
-    <div class="container">
-      <div class="row">
-        <div class="section-title padd-15">
-          <h2>{{ $t('experience.title') }}</h2>
-        </div>
-      </div>
-
+  <MainLayout>
+    <template #content>
       <div class="row">
         <ProgressBar
           v-for="(percent, technology, id) in mapExp"
@@ -15,11 +9,12 @@
           :percent="percent"
         />
       </div>
-    </div>
-  </section>
+    </template>
+  </MainLayout>
 </template>
 
 <script>
+import MainLayout from '../components/layout/MainLayout.vue'
 import ProgressBar from '../components/experience/ProgressBar.vue'
 
 export default {
@@ -43,7 +38,7 @@ export default {
       mapExp,
     }
   },
-  components: { ProgressBar },
+  components: { MainLayout, ProgressBar },
 }
 </script>
 

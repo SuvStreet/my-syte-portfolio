@@ -1,6 +1,6 @@
 <template>
-  <section class="home section">
-    <div class="container">
+  <MainLayout>
+    <template #home>
       <div class="row">
         <div class="home-info padd-15">
           <h3 class="hello">
@@ -19,18 +19,19 @@
           <img src="../assets/my-foto.jpg" alt="my-foto" />
         </div>
       </div>
-    </div>
-  </section>
+    </template>
+  </MainLayout>
 </template>
 
 <script>
+import MainLayout from '../components/layout/MainLayout.vue'
 import TheTypeText from '../components/TheTypeText.vue'
 
 export default {
   setup() {
     return {}
   },
-  components: { TheTypeText },
+  components: { TheTypeText, MainLayout },
 }
 </script>
 

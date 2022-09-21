@@ -1,45 +1,41 @@
 <template>
-  <div class="portfolio section">
-    <div class="container">
-      <router-view v-if="$route.params.id"></router-view>
-
-      <template v-else>
-        <PortfolioLoader v-if="$store.getters['portfolio/loader']" />
+  <MainLayout>
+    <template #content>
+    
+        <router-view v-if="$route.params.id"></router-view>
 
         <template v-else>
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>{{ $t('portfolio.title') }}</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="portfolio-heading padd-15">
-              <h2>{{ $t('portfolio.text') }} :</h2>
-            </div>
-          </div>
+          <PortfolioLoader v-if="$store.getters['portfolio/loader']" />
 
-          <!-- TODO: сделать созтировку -->
-          <!-- <TheSort /> -->
-
-          <!-- TODO: сделать поиск -->
-
-          <div class="row">
-            <div
-              class="portfolio-item padd-15"
-              v-for="project in listProjects"
-              :key="project.idx"
-              @click="clickProject(project.idx)"
-            >
-              <ProjectCard
-                :poster="project.avatar"
-                :title="titleProject(project.idx)"
-              />
+          <template v-else>
+            <div class="row">
+              <div class="portfolio-heading padd-15">
+                <h2>{{ $t('portfolio.text') }} :</h2>
+              </div>
             </div>
-          </div>
+
+            <!-- TODO: сделать созтировку -->
+            <!-- <TheSort /> -->
+
+            <!-- TODO: сделать поиск -->
+
+            <div class="row">
+              <div
+                class="portfolio-item padd-15"
+                v-for="project in listProjects"
+                :key="project.idx"
+                @click="clickProject(project.idx)"
+              >
+                <ProjectCard
+                  :poster="project.avatar"
+                  :title="titleProject(project.idx)"
+                />
+              </div>
+            </div>
+          </template>
         </template>
-      </template>
-    </div>
-  </div>
+    </template>
+  </MainLayout>
 </template>
 
 <script>
@@ -48,6 +44,7 @@ import { useRouter } from 'vue-router'
 import { computed, onMounted, watch } from '@vue/runtime-core'
 import { useStore } from 'vuex'
 
+import MainLayout from '../components/layout/MainLayout.vue'
 import TheSort from '../components/TheSort.vue'
 import PortfolioLoader from '../components/loders-skeleton/PortfolioLoader.vue'
 import ProjectCard from '../components/portfolio/ProjectCard.vue'
@@ -96,6 +93,7 @@ export default {
     }
   },
   components: {
+    MainLayout,
     TheSort,
     PortfolioLoader,
     ProjectCard,

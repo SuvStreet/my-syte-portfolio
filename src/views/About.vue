@@ -1,5 +1,5 @@
 <template>
-  <main-layout :sectionTitle="title">
+  <MainLayout>
     <template #content>
       <div class="row">
         <div class="about-content padd-15">
@@ -35,7 +35,7 @@
         </div>
       </div>
     </template>
-  </main-layout>
+  </MainLayout>
 </template>
 
 <script>
@@ -46,14 +46,12 @@ import Skills from '../components/card/Skills.vue'
 
 export default {
   setup() {
-    const title = 'Обо мне'
-
+    
     const qTitle = {
       education: 'Образование',
       experience: 'Опыт',
     }
     return {
-      title,
       qTitle,
     }
   },

@@ -1,11 +1,6 @@
 <template>
-  <div class="contact section">
-    <div class="container">
-      <div class="row">
-        <div class="section-title padd-15">
-          <h2>Контакты</h2>
-        </div>
-      </div>
+  <MainLayout>
+    <template #content>
       <h3 class="contact-title padd-15">У вас есть вопросы?</h3>
       <h4 class="contact-sub-title padd-15">Я к вашим услугам</h4>
       <div class="row">
@@ -81,13 +76,18 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </template>
+  </MainLayout>
 </template>
 
 <script>
+import MainLayout from '../components/layout/MainLayout.vue'
+
 export default {
   setup() {},
+  components: {
+    MainLayout,
+  },
 }
 </script>
 

@@ -20,6 +20,9 @@
     "portfolio": "Portfolio",
     "contacts": "Kontakt"
   },
+  "about": {
+    "title": "O mnie"
+  },
   "experience": {
     "title": "Doświadczenie"
   },
@@ -37,5 +40,8 @@
     "technology" : "Technologie",
     "date" : "Data",
     "website" : "Strona internetowa"
+  },
+  "contact": {
+    "title": "Kontakt"
   }
 }
