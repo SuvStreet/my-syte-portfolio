@@ -20,14 +20,6 @@
             {{ $t('menu.about') }}
           </router-link>
         </li>
-
-        <li @click="isNav">
-          <router-link to="/service">
-            <i class="fa fa-cog"></i>
-            Услуги
-          </router-link>
-        </li>
-
         <li @click="isNav">
           <router-link to="/experience">
             <i class="fa fa-brain"></i>

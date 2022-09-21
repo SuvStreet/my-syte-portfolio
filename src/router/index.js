@@ -23,12 +23,12 @@ const routes = [
     component: () => import('../views/Experience.vue'),
     // component: Experience,
   },
-  {
-    path: '/service',
-    name: 'Service',
-    component: () => import('../views/Service.vue'),
+  // {
+  //   path: '/service',
+  //   name: 'Service',
+  //   component: () => import('../views/Service.vue'),
     // component: Service,
-  },
+  // },
   {
     path: '/portfolio',
     name: 'Portfolio',
