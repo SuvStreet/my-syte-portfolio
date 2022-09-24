@@ -1,6 +1,6 @@
 <template>
   <MainLayout>
-    <template #home>
+    <template #content>
       <div class="row">
         <div class="home-info padd-15">
           <h3 class="hello">

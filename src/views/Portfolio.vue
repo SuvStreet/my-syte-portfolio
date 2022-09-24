@@ -1,82 +1,72 @@
 <template>
   <MainLayout>
+    <template #title>
+      <SectionTitle />
+    </template>
+
     <template #content>
-    
-        <router-view v-if="$route.params.id"></router-view>
+      <div class="row">
+        <div class="portfolio-heading padd-15">
+          <h2>{{ $t('portfolio.text') }} :</h2>
+        </div>
+      </div>
 
-        <template v-else>
-          <PortfolioLoader v-if="$store.getters['portfolio/loader']" />
+      <PortfolioLoader v-if="statusLoader" />
 
-          <template v-else>
-            <div class="row">
-              <div class="portfolio-heading padd-15">
-                <h2>{{ $t('portfolio.text') }} :</h2>
-              </div>
-            </div>
+      <template v-else>
+        <NoPortfolio v-if="listProjects.length === 0" />
 
-            <!-- TODO: сделать созтировку -->
-            <!-- <TheSort /> -->
+        <!-- TODO: сделать сортировку -->
+        <!-- TODO: сделать поиск -->
 
-            <!-- TODO: сделать поиск -->
-
-            <div class="row">
-              <div
-                class="portfolio-item padd-15"
-                v-for="project in listProjects"
-                :key="project.idx"
-                @click="clickProject(project.idx)"
-              >
-                <ProjectCard
-                  :poster="project.avatar"
-                  :title="titleProject(project.idx)"
-                />
-              </div>
-            </div>
-          </template>
-        </template>
+        <div class="row" v-else>
+          <div
+            class="portfolio-item padd-15"
+            v-for="project in listProjects"
+            :key="project.idx"
+            @click="open(project.idx)"
+          >
+            <PortfolioCard
+              :poster="project.avatar"
+              :title="titleProject(project.idx)"
+            />
+          </div>
+        </div>
+      </template>
     </template>
   </MainLayout>
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
+import { computed, onMounted, ref } from '@vue/runtime-core'
 import { useRouter } from 'vue-router'
-import { computed, onMounted, watch } from '@vue/runtime-core'
 import { useStore } from 'vuex'
 
 import MainLayout from '../components/layout/MainLayout.vue'
-import TheSort from '../components/TheSort.vue'
-import PortfolioLoader from '../components/loders-skeleton/PortfolioLoader.vue'
-import ProjectCard from '../components/portfolio/ProjectCard.vue'
+import SectionTitle from '../components/layout/SectionTitle.vue'
+import NoPortfolio from '../components/portfolio/NoPortfolio.vue'
+import PortfolioLoader from '../components/loader-skeleton/PortfolioLoader.vue'
+import PortfolioCard from '../components/portfolio/PortfolioCard.vue'
 
 export default {
   setup() {
-    const picture = ref('https://api.lorem.space/image/watch?w=150&h=220')
-    const volumePortfolio = ref(3)
     const router = useRouter()
     const store = useStore()
 
+    const statusLoader = computed(() => store.getters['portfolio/loader'])
     const listProjects = computed(() => store.getters['portfolio/getProjects'])
+    // const listProjects = ref([])
 
     onMounted(() => {
       store.dispatch('portfolio/loadingAllProjects')
     })
 
-    function clickProject(id) {
+    function open(id) {
       if (store.getters.getIsToggleNav === 'open') {
-        console.log(
-          'store.getters.getIsToggleNav',
-          store.getters.getIsToggleNav
-        )
         store.commit('setIsToggleNav', '')
       }
 
-      router.push({
-        name: 'project',
-        params: {
-          id,
-        },
-      })
+      router.push(`/project/${id}`)
     }
 
     function titleProject(id) {
@@ -85,18 +75,18 @@ export default {
     }
 
     return {
-      picture,
-      volumePortfolio,
-      clickProject,
+      statusLoader,
+      open,
       listProjects,
       titleProject,
     }
   },
   components: {
     MainLayout,
-    TheSort,
+    SectionTitle,
+    NoPortfolio,
     PortfolioLoader,
-    ProjectCard,
+    PortfolioCard,
   },
 }
 </script>

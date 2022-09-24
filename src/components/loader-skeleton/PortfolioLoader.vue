@@ -1,5 +1,5 @@
 <template>
-  <skeleton-block
+  <!-- <skeleton-block
     class="skeleton title-skeleton"
     effect="wave"
     :borderRadius="radius"
@@ -21,7 +21,7 @@
     class="skeleton text-skeleton"
     effect="wave"
     :borderRadius="radius"
-  ></skeleton-block>
+  ></skeleton-block> -->
 
   <!-- <div class="block-skeleton">
     <skeleton-block

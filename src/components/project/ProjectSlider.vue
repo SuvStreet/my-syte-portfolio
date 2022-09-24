@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="slider">
+    <div class="slider padd-15">
       <div class="slider-container shadow-dark" ref="sliderContainer">
         <div class="slider-inner" v-for="(img, id) in picture" :key="id">
           <img :style="classTransforms" :src="img" alt="picture" />

@@ -1,5 +1,9 @@
 <template>
   <MainLayout>
+    <template #title>
+      <SectionTitle />
+    </template>
+
     <template #content>
       <h3 class="contact-title padd-15">У вас есть вопросы?</h3>
       <h4 class="contact-sub-title padd-15">Я к вашим услугам</h4>
@@ -82,11 +86,13 @@
 
 <script>
 import MainLayout from '../components/layout/MainLayout.vue'
+import SectionTitle from '../components/layout/SectionTitle.vue'
 
 export default {
   setup() {},
   components: {
     MainLayout,
+    SectionTitle
   },
 }
 </script>

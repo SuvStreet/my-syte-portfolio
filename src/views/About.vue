@@ -1,5 +1,9 @@
 <template>
   <MainLayout>
+    <template #title>
+      <SectionTitle />
+    </template>
+
     <template #content>
       <div class="row">
         <div class="about-content padd-15">
@@ -40,6 +44,8 @@
 
 <script>
 import MainLayout from '../components/layout/MainLayout.vue'
+import SectionTitle from '../components/layout/SectionTitle.vue'
+
 import QualificationCard from '../components/about/QualificationCard.vue'
 import InfoItem from '../components/card/InfoItem.vue'
 import Skills from '../components/card/Skills.vue'
@@ -57,6 +63,7 @@ export default {
   },
   components: {
     MainLayout,
+    SectionTitle,
     InfoItem,
     Skills,
     QualificationCard,

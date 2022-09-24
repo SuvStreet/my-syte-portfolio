@@ -29,7 +29,9 @@
   "portfolio": {
     "title": "Portfolio",
     "text": "Moje najnowsze projekty",
-    "sort": ["Wszyscy", "Strona", "Element", "Ładowanie"]
+    "sort": ["Wszyscy", "Strona", "Element", "Ładowanie"],
+    "title-no-portfolio": "Brak projektów.",
+    "text-no-portfolio": "Wróć później, na pewno się tu pojawią!"
   },
   "project": {
     "openDetail": "Szczegółowy"

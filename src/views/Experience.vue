@@ -1,5 +1,9 @@
 <template>
   <MainLayout>
+    <template #title>
+      <SectionTitle />
+    </template>
+
     <template #content>
       <div class="row">
         <ProgressBar
@@ -15,6 +19,7 @@
 
 <script>
 import MainLayout from '../components/layout/MainLayout.vue'
+import SectionTitle from '../components/layout/SectionTitle.vue'
 import ProgressBar from '../components/experience/ProgressBar.vue'
 
 export default {
@@ -38,7 +43,7 @@ export default {
       mapExp,
     }
   },
-  components: { MainLayout, ProgressBar },
+  components: { MainLayout, SectionTitle, ProgressBar },
 }
 </script>
 
