@@ -25,9 +25,9 @@
             </button>
           </div>
         </template>
-        
+
         <template #slider>
-          <ProjectSlider :photo="projectInfo.photo_slider" />
+          <ProjectSlider :photo="projectInfo.photo_slider"/>
         </template>
       </ProjectInfo>
     </template>

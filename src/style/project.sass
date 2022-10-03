@@ -1,0 +1,68 @@
+.btn-details
+  justify-content: flex-start
+  flex-wrap: nowrap
+
+  & .btn
+    padding: 11px 16px
+    margin-right: 10px
+
+    & span i
+      transition: all 1s ease-in-out
+    
+    & .isOpen i 
+      transition: all 1s ease-in-out
+      transform: rotate(45deg)
+
+.group-btn 
+  display: flex
+
+// стили cardinfo
+
+.container hr
+  border: 1px solid var(--text-black-900)
+  margin: 20px 0
+
+.project-card
+  visibility: hidden
+  overflow: hidden
+  height: 0
+  opacity: 0
+  transition: all 1.5s ease
+
+.active 
+  visibility: visible
+  opacity: 1
+
+.project-tag
+  font-size: 15px
+  color: var(--text-black-700)
+  margin-bottom: 15px
+  // margin-top: -30px
+  
+  & small 
+    margin-right: 10px
+
+.project-content 
+  display: flex
+  justify-content: space-between
+  margin-bottom: 15px
+  
+  & h3 
+    font-size: 24px
+    margin-bottom: 15px
+    font-weight: 700
+    color: var(--text-black-900)
+    
+  & .project-title
+    flex: 1 0 70%
+
+
+.project-title,
+.project-tech-title 
+  padding-right: 20px
+
+
+.project-title p,
+.project-tech-title ul
+  font-size: 15px
+  color: var(--text-black-700)

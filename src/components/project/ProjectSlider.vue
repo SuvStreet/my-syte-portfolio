@@ -1,84 +1,58 @@
 <template>
-  <div class="row">
-    <div class="slider padd-15">
-      <div class="slider-container shadow-dark" ref="sliderContainer">
-        <div class="slider-inner" v-for="(img, id) in picture" :key="id">
-          <img :style="classTransforms" :src="img" alt="picture" />
-        </div>
+  <swiper
+    class="mySwiper shadow-dark"
+    :autoHeight="true"
+    :modules="modules"
+    :space-between="10"
+    :pagination="{ type: 'progressbar' }"
+    :navigation="{ hideOnClick: 'true' }"
+    :loop="true"
+    :grabCursor="true"
+    :zoom="true"
+  >
+    <swiper-slide v-for="(img, id) in photo" :key="id">
+      <div class="swiper-zoom-container">
+        <img
+          style="max-width: 100%; object-fit: cover"
+          :src="img"
+          alt="picture"
+        />
       </div>
-      <div class="slider-btn">
-        <button class="past" @click="postPicture">
-          <i class="fa-solid fa-caret-left"></i>
-        </button>
-        <button class="next" @click="nextPicture">
-          <i class="fa-solid fa-caret-right"></i>
-        </button>
-      </div>
-    </div>
-  </div>
+    </swiper-slide>
+  </swiper>
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
-import { computed, onMounted, watch } from '@vue/runtime-core'
-import { useStore } from 'vuex'
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from 'swiper/vue'
+
+// import Swiper core and required modules
+import { Navigation, Pagination, Zoom } from 'swiper'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/zoom'
 
 export default {
   props: ['photo'],
-  setup(props) {
-    const store = useStore()
-    const picture = ref(props.photo)
-    const sliderContainer = ref(null)
-    const width = ref(0)
-    const count = ref(0)
-    const classTransforms = ref('')
-
-    onMounted(() => {
-      window.addEventListener('resize', rollSlider)
-    })
-
-    // watch(width, (old, newV) => {
-    //   console.log('old', old)
-    //   console.log('new', newV)
-    // })
-
-    function nextPicture() {
-      count.value++
-      rollSlider()
-    }
-
-    function rollSlider() {
-      if (sliderContainer.value.offsetWidth !== null) {
-        width.value = sliderContainer.value.offsetWidth
-      }
-
-      classTransforms.value = `transform: translate(-${
-        (width.value - 12) * count.value
-      }px)`
-
-      if (count.value === props.photo.length) {
-        classTransforms.value = `transform: translate(0px)`
-        count.value = 0
-      }
-    }
-
-    function postPicture() {
-      if (count.value === 0) {
-        count.value = props.photo.length
-      }
-      count.value--
-      rollSlider()
-    }
-
+  setup() {
     return {
-      picture,
-      nextPicture,
-      postPicture,
-      sliderContainer,
-      classTransforms,
+      modules: [Navigation, Pagination, Zoom],
     }
+  },
+  components: {
+    Swiper,
+    SwiperSlide,
   },
 }
 </script>
 
-<style></style>
+<style scoped>
+.mySwiper {
+  border: 6px solid var(--bg-black-100);
+  border-radius: 10px;
+  margin-top: 50px;
+}
+</style>
