@@ -22,6 +22,24 @@
   },
   "about": {
     "title": "Обо мне",
+    "personal-info-title": {
+      "birthday": "День рождения",
+      "age": "Возраст",
+      "website": "Сайт",
+      "email": "Email",
+      "telephone": "Телефон",
+      "city": "Город",
+      "status-work": "Статус работы"
+    },
+    "personal-info-description": [
+      "{birthday}",
+      "{age}",
+      "{website}",
+      "{account}{'@'}{domain}",
+      "{telephone}",
+      "Познань",
+      "В активном поиске"
+    ],
     "button": "Связаться со мной"
   },
   "experience": {

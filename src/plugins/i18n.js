@@ -9,11 +9,30 @@ const messages = {
   pl,
 }
 
+const datetimeFormats = {
+  'ru': {
+    long: {
+      year: 'numeric', month: 'short', day: 'numeric',
+    }
+  },
+  'en': {
+    long: {
+      year: 'numeric', month: 'short', day: 'numeric',
+    }
+  },
+  'pl': {
+    long: {
+      year: 'numeric', month: 'short', day: 'numeric',
+    }
+  }
+}
+
 const i18n = createI18n({
   legacy: false,
   locale: `ru`,
   fallbackLocale: 'ru',
   messages,
+  datetimeFormats
 })
 
 export default i18n

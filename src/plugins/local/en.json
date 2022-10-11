@@ -22,6 +22,24 @@
   },
   "about": {
     "title": "About",
+    "personal-info-title": {
+      "birthday": "Birthday",
+      "age": "Age",
+      "website": "Website",
+      "email": "Email",
+      "telephone": "Telephone",
+      "city": "City",
+      "status-work": "Job status"
+    },
+    "personal-info-description": [
+      "{birthday}",
+      "{age}",
+      "{website}",
+      "{account}{'@'}{domain}",
+      "{telephone}",
+      "Poznan",
+      "In active search"
+    ],
     "button": "Contact me"
   },
   "experience": {
@@ -38,11 +56,11 @@
     "openDetail": "More details"
   },
   "projectInfo": {
-    "description" : "Project Description",
-    "info" : "Project Information",
-    "technology" : "Technologies",
-    "date" : "Date",
-    "website" : "Website"
+    "description": "Project Description",
+    "info": "Project Information",
+    "technology": "Technologies",
+    "date": "Date",
+    "website": "Website"
   },
   "contact": {
     "title": "Contacts"

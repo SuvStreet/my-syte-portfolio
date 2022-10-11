@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="row">
-            <InfoItem />
+            <AboutPersonalInfo />
           </div>
           <div class="row">
             <qualification-card
@@ -45,7 +45,7 @@ import MainLayout from '../components/layout/MainLayout.vue'
 import SectionTitle from '../components/layout/SectionTitle.vue'
 
 import QualificationCard from '../components/about/QualificationCard.vue'
-import InfoItem from '../components/card/InfoItem.vue'
+import AboutPersonalInfo from '../components/about/AboutPersonalInfo.vue'
 import Skills from '../components/card/Skills.vue'
 
 export default {
@@ -62,7 +62,7 @@ export default {
   components: {
     MainLayout,
     SectionTitle,
-    InfoItem,
+    AboutPersonalInfo,
     Skills,
     QualificationCard,
   },

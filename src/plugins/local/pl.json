@@ -22,6 +22,24 @@
   },
   "about": {
     "title": "O mnie",
+    "personal-info-title": {
+      "birthday": "Urodziny",
+      "age": "Wiek",
+      "website": "Witryna",
+      "email": "Email",
+      "telephone": "Telefon",
+      "city": "Miasto",
+      "status-work": "Status pracy"
+    },
+    "personal-info-description": [
+      "{birthday}",
+      "{age}",
+      "{website}",
+      "{account}{'@'}{domain}",
+      "{telephone}",
+      "Poznań",
+      "W aktywnym wyszukiwaniu"
+    ],
     "button": "Kontakt ze mną"
   },
   "experience": {
@@ -38,11 +56,11 @@
     "openDetail": "Szczegółowy"
   },
   "projectInfo": {
-    "description" : "Opis projektu",
-    "info" : "Informacje o projekcie",
-    "technology" : "Technologie",
-    "date" : "Data",
-    "website" : "Strona internetowa"
+    "description": "Opis projektu",
+    "info": "Informacje o projekcie",
+    "technology": "Technologie",
+    "date": "Data",
+    "website": "Strona internetowa"
   },
   "contact": {
     "title": "Kontakt"
