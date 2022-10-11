@@ -21,7 +21,8 @@
     "contacts": "Kontakt"
   },
   "about": {
-    "title": "O mnie"
+    "title": "O mnie",
+    "button": "Kontakt ze mną"
   },
   "experience": {
     "title": "Doświadczenie"

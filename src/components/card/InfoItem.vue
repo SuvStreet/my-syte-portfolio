@@ -7,17 +7,17 @@
         </p>
       </div>
     </div>
-    <div class="row">
-      <div class="buttons padd-15">
-        <router-link to="/contact" class="btn hire-me">
-          Связаться со мной
-        </router-link>
-      </div>
-    </div>
+
+    <Button link="/contact">
+      <template #title>{{ $t('about.button') }}</template>
+    </Button>
+    
   </div>
 </template>
 
 <script>
+import Button from "../other/Button.vue"
+
 export default {
   setup() {
     const titleMap = {
@@ -45,6 +45,9 @@ export default {
       textTitle: (idx) => infoMap[idx],
     }
   },
+  components: {
+    Button,
+  }
 }
 </script>
 

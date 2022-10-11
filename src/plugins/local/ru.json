@@ -21,7 +21,8 @@
     "contacts": "Контакты"
   },
   "about": {
-    "title": "Обо мне"
+    "title": "Обо мне",
+    "button": "Связаться со мной"
   },
   "experience": {
     "title": "Опыт"

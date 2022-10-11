@@ -24,8 +24,6 @@
           </div>
           <div class="row">
             <InfoItem />
-
-            <Skills />
           </div>
           <div class="row">
             <qualification-card
