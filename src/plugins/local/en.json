@@ -22,6 +22,11 @@
   },
   "about": {
     "title": "About",
+    "text": {
+      "h3": "My name is Dmitry Kolotusha and I am a",
+      "span": "web developer",
+      "p": "Hardworking and motivated web developer. I like to design and revitalize websites. I like to solve problems, learn new technologies and know how to ask questions to learn faster. At the moment, I already have experience with Vue.js and React.js. I'm not going to stop there and will continue to look for experience in different projects..."
+    },
     "personal-info-title": {
       "birthday": "Birthday",
       "age": "Age",

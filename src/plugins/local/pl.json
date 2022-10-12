@@ -22,6 +22,11 @@
   },
   "about": {
     "title": "O mnie",
+    "text": {
+      "h3": "Nazywam się Dmitry Kolotusha i jestem",
+      "span": "web developerem",
+      "p": "Pracowity i zmotywowany web developer. Lubię projektować i rewitalizować strony internetowe. Lubię rozwiązywać problemy, uczyć się nowych technologii i umiem zadawać pytania, aby szybciej się uczyć. W tej chwili mam już doświadczenie z Vue.js i React.js. Na tym nie poprzestanę i będę dalej szukał doświadczenia w różnych projektach..."
+    },
     "personal-info-title": {
       "birthday": "Urodziny",
       "age": "Wiek",
