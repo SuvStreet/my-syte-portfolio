@@ -35,7 +35,6 @@ import SectionTitle from '../components/layout/SectionTitle.vue'
 import AboutText from '../components/about/AboutText.vue'
 import AboutPersonalInfo from '../components/about/AboutPersonalInfo.vue'
 import QualificationCard from '../components/about/QualificationCard.vue'
-import Skills from '../components/card/Skills.vue'
 
 export default {
   setup() {
@@ -53,7 +52,6 @@ export default {
     SectionTitle,
     AboutText,
     AboutPersonalInfo,
-    Skills,
     QualificationCard,
   },
 }
