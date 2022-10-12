@@ -14,13 +14,8 @@
             <AboutPersonalInfo />
           </div>
           <div class="row">
-            <qualification-card
-              v-for="(text, className, id) in qTitle"
-              :key="id"
-              :className="className"
-              :qTitle="text"
-            >
-            </qualification-card>
+            <AboutEducation />
+            <AboutExperience />
           </div>
         </div>
       </div>
@@ -34,7 +29,8 @@ import SectionTitle from '../components/layout/SectionTitle.vue'
 
 import AboutText from '../components/about/AboutText.vue'
 import AboutPersonalInfo from '../components/about/AboutPersonalInfo.vue'
-import QualificationCard from '../components/about/QualificationCard.vue'
+import AboutEducation from '../components/about/AboutEducation.vue'
+import AboutExperience from '../components/about/AboutExperience.vue'
 
 export default {
   setup() {
@@ -52,7 +48,8 @@ export default {
     SectionTitle,
     AboutText,
     AboutPersonalInfo,
-    QualificationCard,
+    AboutEducation,
+    AboutExperience
   },
 }
 </script>

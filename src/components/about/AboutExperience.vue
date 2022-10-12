@@ -1,7 +1,7 @@
 <template>
-  <div :class="['padd-15', className]">
+  <div class="padd-15 experience">
 
-    <h3 class="title">{{ qTitle }}</h3>
+    <h3 class="title">{{ $t("about.experience-card.title") }}</h3>
 
     <div class="row">
       <div class="timeline-box padd-15">

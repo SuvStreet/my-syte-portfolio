@@ -45,7 +45,39 @@
       "Poznan",
       "In active search"
     ],
-    "button": "Contact me"
+    "button": "Contact me",
+    "education-card": {
+      "title": "An education",
+      "text": {
+        "vue": {
+          "title": "Vue 3 Course",
+          "text": "Getting to know and learning the Vue 3 framework at Result.School"
+        },
+        "js": {
+          "title": "JavaScript marathon",
+          "text": "Intensive marathon in JavaScript. The author of the course is Vladilen Minin, founder of Result.Shool"
+        },
+        "react": {
+          "title": "React marathon",
+          "text": "Intensive React marathon for 4 weeks. The author of the course is Zar Zakharov, an active developer with 15 years of experience."
+        },
+        "frontend": {
+          "title": "Frontend developer course",
+          "text": "First acquaintance with HTML, CSS, React, Git. The courses were conducted by ORmedia"
+        },
+        "SkillBox": {
+          "title": "SkillBox",
+          "text": "Deep knowledge of the Python language"
+        },
+        "itStep": {
+          "title": "Computer Academy STEP",
+          "text": "Trained as a software developer. The first serious acquaintance with IT. Acquainted with C, C++, C#, SQL, Python"
+        }
+      }
+    },
+    "experience-card": {
+      "title": "An experience"
+    }
   },
   "experience": {
     "title": "Experience"

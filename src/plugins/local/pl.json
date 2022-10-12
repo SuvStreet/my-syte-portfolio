@@ -45,7 +45,39 @@
       "Poznań",
       "W aktywnym wyszukiwaniu"
     ],
-    "button": "Kontakt ze mną"
+    "button": "Kontakt ze mną",
+    "education-card": {
+      "title": "Edukacja",
+      "text": {
+        "vue": {
+          "title": "Kurs Vue 3",
+          "text": "Poznawanie i nauka frameworka Vue 3 w szkole Result.Shool"
+        },
+        "js": {
+          "title": "JavaScript maraton",
+          "text": "Intensywny maraton JavaScript. Autor kursu – Vladilen Minin, założyciel szkoły Result.Shool"
+        },
+        "react": {
+          "title": "React maraton",
+          "text": "Intensywny maraton React przez 4 tygodnie. Autor kursu – Zar Zacharow, aktywny deweloper z 15-letnim doświadczeniem."
+        },
+        "frontend": {
+          "title": "Kurs Frontend deweloper",
+          "text": "Pierwsze kroki z HTML, CSS, React, Git. Kursy były prowadzone przez firmę ORmedia"
+        },
+        "SkillBox": {
+          "title": "SkillBox",
+          "text": "Dogłębna znajomość języka Python"
+        },
+        "itStep": {
+          "title": "Akademia Komputerowa KROK",
+          "text": "Z wykształcenia programista. Pierwsza poważna znajomość IT. Zapoznany z C, C++, C#, SQL, Python"
+        }
+      }
+    },
+    "experience-card": {
+      "title": "Doświadczenie"
+    }
   },
   "experience": {
     "title": "Doświadczenie"
