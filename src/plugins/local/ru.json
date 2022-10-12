@@ -16,9 +16,9 @@
   "menu": {
     "home": "Главная",
     "about": "@:about.title",
-    "experience": "Опыт",
-    "portfolio": "Портфолио",
-    "contacts": "Контакты"
+    "experience": "@:experience.title",
+    "portfolio": "@:portfolio.title",
+    "contacts": "@:contact.title"
   },
   "about": {
     "title": "Обо мне",

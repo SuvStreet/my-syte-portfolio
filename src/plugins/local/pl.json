@@ -15,10 +15,10 @@
   },
   "menu": {
     "home": "Strona główna",
-    "about": "O mnie",
-    "experience": "Doświadczenie",
-    "portfolio": "Portfolio",
-    "contacts": "Kontakt"
+    "about": "@:about.title",
+    "experience": "@:experience.title",
+    "portfolio": "@:portfolio.title",
+    "contacts": "@:contact.title"
   },
   "about": {
     "title": "O mnie",
