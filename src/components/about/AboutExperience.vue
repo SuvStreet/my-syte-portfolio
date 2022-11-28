@@ -1,52 +1,19 @@
 <template>
   <div class="padd-15 experience">
-
-    <h3 class="title">{{ $t("about.experience-card.title") }}</h3>
+    <h3 class="title">{{ $t('about.experience-card.title') }}</h3>
 
     <div class="row">
       <div class="timeline-box padd-15">
         <div class="timeline shadow-dark">
-          <div class="timeline-item">
-            <div class="circle-dot"></div>
-            <h3 class="timeline-date">
-              <i class="fa fa-calendar"></i> 2013 - 2015
-            </h3>
-            <h4 class="timeline-title">Мастер компьютерных наук</h4>
-            <p class="timeline-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              aspernatur cupiditate aut atque voluptatem, ut natus, fugit sequi
-              ratione accusamus mollitia molestias, maiores ad. Repudiandae
-              numquam, ab sunt sed atque magni enim doloribus.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="circle-dot"></div>
-            <h3 class="timeline-date">
-              <i class="fa fa-calendar"></i> 2013 - 2015
-            </h3>
-            <h4 class="timeline-title">Мастер компьютерных наук</h4>
-            <p class="timeline-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              aspernatur cupiditate aut atque voluptatem, ut natus, fugit sequi
-              ratione accusamus mollitia molestias, maiores ad. Repudiandae
-              numquam, ab sunt sed atque magni enim doloribus.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="circle-dot"></div>
-            <h3 class="timeline-date">
-              <i class="fa fa-calendar"></i> 2013 - 2015
-            </h3>
-            <h4 class="timeline-title">Мастер компьютерных наук</h4>
-            <p class="timeline-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              aspernatur cupiditate aut atque voluptatem, ut natus, fugit sequi
-              ratione accusamus mollitia molestias, maiores ad. Repudiandae
-              numquam, ab sunt sed atque magni enim doloribus.
-            </p>
-          </div>
+          <AboutCard v-for="(data, key, id) in experienceMapList" :key="id">
+            <template #date> {{ data }} </template>
+            <template #title>
+              {{ $t(`${linkAboutI18n}.${key}.title`) }}
+            </template>
+            <template #text>
+              {{ $t(`${linkAboutI18n}.${key}.text`) }}
+            </template>
+          </AboutCard>
         </div>
       </div>
     </div>
@@ -54,9 +21,22 @@
 </template>
 
 <script>
+import AboutCard from './AboutCard.vue'
+
 export default {
-  props: ['className', 'qTitle'],
   setup() {
+    const experienceMapList = {
+      result_shool: '2021-2022',
+      ormedia: '2020-2021'
+    }
+
+    return {
+      experienceMapList,
+      linkAboutI18n: 'about.experience-card.text',
+    }
+  },
+  components: {
+    AboutCard,
   },
 }
 </script>

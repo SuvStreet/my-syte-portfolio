@@ -76,7 +76,17 @@
       }
     },
     "experience-card": {
-      "title": "An experience"
+      "title": "An experience",
+      "text": {
+        "result_shool": {
+          "title": "Result.Shool",
+          "text": "Development of web pages on Vue 3, code optimization, development on the Composition API, rewriting code from the Option API to the Composition API"
+        },
+        "ormedia": {
+          "title": "ORMedia",
+          "text": "Engaged in web page layout, maintained and optimized the old code, front end development on React."
+        }
+      }
     }
   },
   "experience": {

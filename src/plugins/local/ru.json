@@ -76,7 +76,17 @@
       }
     },
     "experience-card": {
-      "title": "Опыт"
+      "title": "Опыт",
+      "text": {
+        "result_shool": {
+          "title": "Result.Shool",
+          "text": "Разработка веб-страниц на Vue3, оптимизация кода, разработка на Composition API, переписывание кода с Option API на Composition API"
+        },
+        "ormedia": {
+          "title": "ORMedia",
+          "text": "Занимался вёрсткой веб-страниц, поддерживал и оптимизировал старый код, разработка frontend на React."
+        }
+      }
     }
   },
   "experience": {

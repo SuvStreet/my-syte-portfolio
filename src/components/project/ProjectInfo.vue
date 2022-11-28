@@ -57,7 +57,7 @@ import MainLayout from '../layout/MainLayout.vue'
 
 export default {
   props: ['info'],
-  setup(props) {
+  setup() {
     const store = useStore()
     const card = ref(null)
 

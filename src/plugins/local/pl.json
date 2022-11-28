@@ -76,7 +76,17 @@
       }
     },
     "experience-card": {
-      "title": "Doświadczenie"
+      "title": "Doświadczenie",
+      "text": {
+        "result_shool": {
+          "title": "Result.Shool",
+          "text": "Tworzenie stron internetowych w Vue 3, Optymalizacja kodu, tworzenie w Composition API, przepisywanie kodu z Option API na Composition API"
+        },
+        "ormedia": {
+          "title": "ORMedia",
+          "text": "Zajmowałem się układaniem stron internetowych, utrzymywałem i optymalizowałem stary kod, projektując interfejs w React."
+        }
+      }
     }
   },
   "experience": {
