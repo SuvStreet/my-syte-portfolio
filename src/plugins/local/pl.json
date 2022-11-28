@@ -110,6 +110,28 @@
     "website": "Strona internetowa"
   },
   "contact": {
-    "title": "Kontakt"
+    "title": "Kontakt",
+    "first-title": "Ma państwo jakieś pytania?",
+    "first-sub-title": "Jestem do dyspozycji",
+    "info": {
+      "phone": {
+        "title": "Telegram",
+        "text": "{'@'}SuvStreet"
+      },
+      "marker": {
+        "title": "Urząd",
+        "text": "Moskwa"
+      },
+      "envelope": {
+        "title": "Email",
+        "text": "suvstreet{'@'}gmail.com"
+      },
+      "web": {
+        "title": "Strona internetowa",
+        "text": "www.suvstreet.com"
+      }
+    },
+    "second-title": "Napisz mi e-mail",
+    "second-sub-title": "Jestem bardzo wrażliwy na wiadomości"
   }
 }

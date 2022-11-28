@@ -110,6 +110,28 @@
     "website": "Website"
   },
   "contact": {
-    "title": "Contacts"
+    "title": "Contacts",
+    "first-title": "Do you have any questions?",
+    "first-sub-title": "I am at your service",
+    "info": {
+      "phone": {
+        "title": "Telegram",
+        "text": "{'@'}SuvStreet"
+      },
+      "marker": {
+        "title": "Office",
+        "text": "Moscow"
+      },
+      "envelope": {
+        "title": "Email",
+        "text": "suvstreet{'@'}gmail.com"
+      },
+      "web": {
+        "title": "Website",
+        "text": "www.suvstreet.com"
+      }
+    },
+    "second-title": "Write to me by email",
+    "second-sub-title": "I am very responsive to messages"
   }
 }

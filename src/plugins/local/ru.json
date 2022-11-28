@@ -111,6 +111,28 @@
     "github": "GitHub"
   },
   "contact": {
-    "title": "Контакты"
+    "title": "Контакты",
+    "first-title": "У вас есть вопросы?",
+    "first-sub-title": "Я к вашим услугам",
+    "info": {
+      "phone": {
+        "title": "Телеграм",
+        "text": "{'@'}SuvStreet"
+      },
+      "marker": {
+        "title": "Офис",
+        "text": "Москва"
+      },
+      "envelope": {
+        "title": "Email",
+        "text": "suvstreet{'@'}gmail.com"
+      },
+      "web": {
+        "title": "Сайт",
+        "text": "www.suvstreet.com"
+      }
+    },
+    "second-title": "Напиши мне на email",
+    "second-sub-title": "Я очень отзывчив на сообщения"
   }
 }
