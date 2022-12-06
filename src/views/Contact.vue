@@ -20,9 +20,7 @@
       <ContactTitleLayout text="second"></ContactTitleLayout>
 
       <div class="row">
-
         <ContactForm></ContactForm>
-
       </div>
     </template>
   </MainLayout>
@@ -53,7 +51,7 @@ export default {
     SectionTitle,
     ContactTitleLayout,
     ContactCardLayout,
-    ContactForm
+    ContactForm,
   },
 }
 </script>

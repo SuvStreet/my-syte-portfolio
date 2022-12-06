@@ -132,7 +132,21 @@
         "text": "www.suvstreet.com"
       }
     },
-    "second-title": "Напиши мне на email",
-    "second-sub-title": "Я очень отзывчив на сообщения"
+    "second-title": "Напиши мне на Telegram",
+    "second-sub-title": "Я очень отзывчив на сообщения",
+    "placeholder": {
+      "telegram": "{'@'}телеграм",
+      "email": "Email*",
+      "subject": "Тема*",
+      "message": "Сообщение*"
+    },
+    "form-button": "Отправить сообщение"
+  },
+  "errors": {
+    "required" : "Обязательно для заполнения!",
+    "min-length-value": "Минимальная длина - {value} символов!",
+    "telegram-name": "Неккоректное имя telegram!",
+    "email-name": "Неккоректный email адрес!",
+    "max-length-value": "Не более {value} символов!"
   }
 }

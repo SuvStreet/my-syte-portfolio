@@ -1,5 +1,4 @@
 import axios from 'axios'
-import store from '..'
 
 export default {
   namespaced: true,
@@ -22,7 +21,7 @@ export default {
         commit('loader', true)
 
         const { data } = await axios.get(
-          'https://suvstreet-portfolio-default-rtdb.europe-west1.firebasedatabase.app/request.json'
+          `${process.env.VUE_APP_FB_URL}`
         )
 
         if (data) {
@@ -38,7 +37,7 @@ export default {
         commit('loader', false)
       }
       else {
-        return store.projects
+        return state.projects
       }
     },
   },

@@ -131,7 +131,21 @@
         "text": "www.suvstreet.com"
       }
     },
-    "second-title": "Napisz mi e-mail",
-    "second-sub-title": "Jestem bardzo wrażliwy na wiadomości"
+    "second-title": "Napisz mi Telegram",
+    "second-sub-title": "Jestem bardzo wrażliwy na wiadomości",
+    "placeholder": {
+      "telegram": "{'@'}telegram",
+      "email": "Email",
+      "subject": "Temat",
+      "message": "Wiadomość"
+    },
+    "form-button": "Wyślij wiadomość"
+  },
+  "errors": {
+    "required" : "Obowiązkowe do wypełnienia!",
+    "min-length-value": "Minimalna długość - {value} znaków!",
+    "telegram-name": "Nieprawidłowa nazwa telegramu!",
+    "email-name": "Nieprawidłowy adres e-mail!",
+    "max-length-value": "Nie więcej niż {value} znaków!"
   }
 }

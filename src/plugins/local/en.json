@@ -131,7 +131,21 @@
         "text": "www.suvstreet.com"
       }
     },
-    "second-title": "Write to me by email",
-    "second-sub-title": "I am very responsive to messages"
+    "second-title": "Write to me by Telegram",
+    "second-sub-title": "I am very responsive to messages",
+    "placeholder": {
+      "telegram": "{'@'}telegram",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message"
+    },
+    "form-button": "Send a message"
+  },
+  "errors": {
+    "required" : "Required to fill in!",
+    "min-length-value": "The minimum length is {value} characters!",
+    "telegram-name": "Invalid telegram name!",
+    "email-name": "Invalid email address!",
+    "max-length-value": "No more than {value} characters!"
   }
 }
