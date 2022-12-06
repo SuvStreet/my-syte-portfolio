@@ -23,7 +23,7 @@ export function validateForm() {
   })
 
   const MIN_LENGTH_VALUE_TELEGRAM = 6
-  const MAX_LENGTH_VALUE_SUBJECT = 30
+  const MAX_LENGTH_VALUE_SUBJECT = 50
   const MAX_LENGTH_VALUE_MESSAGE = 350
 
   const validateTelegram = helpers.regex(/^\@/)
@@ -71,19 +71,17 @@ export function validateForm() {
 
   const subjectErrors = computed(() => {
     let error = ''
-    if (v$.value.subject.required.$invalid)
-      error = t('errors.required')
+    if (v$.value.subject.required.$invalid) error = t('errors.required')
     if (v$.value.subject.maxLengthValue.$invalid)
-      error = t('errors.max-length-value', {value: MAX_LENGTH_VALUE_SUBJECT})
+      error = t('errors.max-length-value', { value: MAX_LENGTH_VALUE_SUBJECT })
     return error
   })
 
   const messageErrors = computed(() => {
     let error = ''
-    if (v$.value.message.required.$invalid)
-      error = t('errors.required')
+    if (v$.value.message.required.$invalid) error = t('errors.required')
     if (v$.value.message.maxLengthValue.$invalid)
-      error = t('errors.max-length-value', {value: MAX_LENGTH_VALUE_MESSAGE})
+      error = t('errors.max-length-value', { value: MAX_LENGTH_VALUE_MESSAGE })
     return error
   })
 
@@ -99,6 +97,13 @@ export function validateForm() {
 
     if (isFormCorrect) {
       store.dispatch('tgBotMessage/postMessage', listMessage)
+
+      state.telegram = ''
+      state.email = ''
+      state.subject = ''
+      state.message = ''
+
+      v$.value.$reset()
     }
   }
 
