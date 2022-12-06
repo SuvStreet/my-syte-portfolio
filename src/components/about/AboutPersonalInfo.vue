@@ -9,10 +9,9 @@
               $t(`about.personal-info-description[${id}]`, {
                 birthday: $d(new Date(1995, 1, 24), 'long'),
                 age: Age(),
-                website: 'www.suvstreet.com',
+                website: 'suvstreet-portfolio.web.app',
                 account: 'suvstreet',
                 domain: 'gmail.com',
-                telephone: '+48 123 456 789',
               })
             }}
           </span>
@@ -36,7 +35,6 @@ export default {
       'age',
       'website',
       'email',
-      'telephone',
       'city',
       'status-work',
     ]

@@ -10,7 +10,7 @@
       "fourthString": "junior frontend developer",
       "fifthString": "js expert"
     },
-    "info": "Web developer with 1 year experience. Experience lies in the creation of dynamic sites (SPA). I build websites based on React and Vue. I make them functional and optimized.",
+    "info": "Web developer with 2 years of experience. I write functional, complex, beautiful websites (Single Page Application). I strive for professional knowledge in React and Vue.",
     "nameBtnSaveResume": "Download CV"
   },
   "menu": {
@@ -25,14 +25,13 @@
     "text": {
       "h3": "My name is Dmitry Kolotusha and I am a",
       "span": "web developer",
-      "p": "Hardworking and motivated web developer. I like to design and revitalize websites. I like to solve problems, learn new technologies and know how to ask questions to learn faster. At the moment, I already have experience with Vue.js and React.js. I'm not going to stop there and will continue to look for experience in different projects..."
+      "p": "I strive to write my code clearly and legibly so that it is understandable to others. I want to try myself in team development on Vue, React. I am attentive to the tasks set. An insane desire to learn more technologies in web development and create truly unique, complex and beautiful projects."
     },
     "personal-info-title": {
       "birthday": "Birthday",
       "age": "Age",
       "website": "Website",
       "email": "Email",
-      "telephone": "Telephone",
       "city": "City",
       "status-work": "Job status"
     },
@@ -41,7 +40,6 @@
       "{age}",
       "{website}",
       "{account}{'@'}{domain}",
-      "{telephone}",
       "Poznan",
       "In active search"
     ],

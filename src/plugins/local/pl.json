@@ -10,7 +10,7 @@
       "fourthString": "junior frontend developer",
       "fifthString": "js specjalista"
     },
-    "info": "Programista stron internetowych z rocznym doświadczeniem. Doświadczenie polega na tworzeniu dynamicznych stron internetowych (SPA). Tworzę strony oparte na React i Vue. Sprawiają, że są funkcjonalne i zoptymalizowane.",
+    "info": "Web developer z 2 letnim doświadczeniem. Piszę funkcjonalne, złożone, piękne strony internetowe (Single Page Application). Dążę do profesjonalnej wiedzy w React i Vue.",
     "nameBtnSaveResume": "Pobierz CV"
   },
   "menu": {
@@ -25,14 +25,13 @@
     "text": {
       "h3": "Nazywam się Dmitry Kolotusha i jestem",
       "span": "web developerem",
-      "p": "Pracowity i zmotywowany web developer. Lubię projektować i rewitalizować strony internetowe. Lubię rozwiązywać problemy, uczyć się nowych technologii i umiem zadawać pytania, aby szybciej się uczyć. W tej chwili mam już doświadczenie z Vue.js i React.js. Na tym nie poprzestanę i będę dalej szukał doświadczenia w różnych projektach..."
+      "p": "Staram się pisać mój kod w czysty i czytelny sposób, aby był zrozumiały dla innych. Chcę spróbować swoich sił w rozwoju zespołu na Vue, React. Sumiennie podchodzę do powierzonych zadań. Szalone pragnienie uczenia się więcej technologii w tworzeniu stron internetowych i tworzenia naprawdę wyjątkowych, złożonych i pięknych projektów."
     },
     "personal-info-title": {
       "birthday": "Urodziny",
       "age": "Wiek",
-      "website": "Witryna",
+      "website": "Strona internetowa",
       "email": "Email",
-      "telephone": "Telefon",
       "city": "Miasto",
       "status-work": "Status pracy"
     },
@@ -41,7 +40,6 @@
       "{age}",
       "{website}",
       "{account}{'@'}{domain}",
-      "{telephone}",
       "Poznań",
       "W aktywnym wyszukiwaniu"
     ],
