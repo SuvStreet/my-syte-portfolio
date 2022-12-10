@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <Button link="/contact">
+    <Button link="/contact" className="buttons padd-15">
       <template #title>{{ $t('about.button') }}</template>
     </Button>
   </div>

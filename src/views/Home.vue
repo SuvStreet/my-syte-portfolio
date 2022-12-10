@@ -11,9 +11,10 @@
           <p>
             {{ $t('home.info') }}
           </p>
-          <router-link to="/#" class="btn hire-me">
+
+          <button class="btn" @click="onDownloadCV">
             {{ $t('home.nameBtnSaveResume') }}
-          </router-link>
+          </button>
         </div>
         <div class="home-img padd-15">
           <img src="../assets/my-foto.jpg" alt="my-foto" />
@@ -24,12 +25,36 @@
 </template>
 
 <script>
+import { computed, onMounted, watch } from '@vue/runtime-core'
+import { useStore } from 'vuex'
+
 import MainLayout from '../components/layout/MainLayout.vue'
 import TheTypeText from '../components/TheTypeText.vue'
 
 export default {
   setup() {
-    return {}
+    const store = useStore()
+    
+    const locale = computed(() => store.getters['i18n/getLanguage'])
+    const linkDownload = computed(() =>
+      store.dispatch('downloadCV/setLinkDownloadCV', locale.value)
+    )
+
+    watch(locale, () => {
+      linkDownload.value
+    })
+
+    onMounted(() => {
+      linkDownload.value
+    })
+
+    const onDownloadCV = () => {
+      store.dispatch('downloadCV/downloadCV', locale.value)
+    }
+
+    return {
+      onDownloadCV,
+    }
   },
   components: { TheTypeText, MainLayout },
 }

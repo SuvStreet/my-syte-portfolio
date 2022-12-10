@@ -9,15 +9,15 @@
   "dependencies": {
     "@vuelidate/core": "^2.0.0",
     "@vuelidate/validators": "^2.0.0",
-    "axios": "^0.27.2",
-    "core-js": "^3.25.0",
-    "firebase": "^9.9.4",
-    "skeleton-elements": "^4.0.0",
-    "swiper": "^8.4.2",
-    "vue": "^3.2.38",
+    "axios": "^1.2.1",
+    "core-js": "^3.26.1",
+    "firebase": "^9.14.0",
+    "skeleton-elements": "^4.0.1",
+    "swiper": "^8.4.5",
+    "vue": "^3.2.45",
     "vue-i18n": "^9.2.2",
-    "vue-router": "^4.1.5",
-    "vuex": "^4.0.2"
+    "vue-router": "^4.1.6",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^0.5.0",
