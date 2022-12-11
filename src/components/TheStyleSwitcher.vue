@@ -6,7 +6,7 @@
     <div class="day-night s-icon" @click="lightDarkMode">
       <i class="fa" id="iconMode"></i>
     </div>
-    <h4>Цвета темы</h4>
+    <h4>{{ $t('color-theme') }}</h4>
     <div class="colors">
       <span
         v-for="(col, id) in mapColor"

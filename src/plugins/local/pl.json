@@ -5,10 +5,10 @@
     "i": "Jestem",
     "typedStrings": {
       "firstString": " ",
-      "secondString": "programistą stron internetowych",
-      "thirdString": "tworzę strony",
-      "fourthString": "junior frontend developer",
-      "fifthString": "js specjalista"
+      "secondString": "Frontend developer",
+      "thirdString": "koderem",
+      "fourthString": "Vue, React specjalista",
+      "fifthString": "js programista"
     },
     "info": "Web developer z 2 letnim doświadczeniem. Piszę funkcjonalne, złożone, piękne strony internetowe (Single Page Application). Dążę do profesjonalnej wiedzy w React i Vue.",
     "nameBtnSaveResume": "Pobierz CV"
@@ -20,12 +20,13 @@
     "portfolio": "@:portfolio.title",
     "contacts": "@:contact.title"
   },
+  "color-theme": "kolory motywu",
   "about": {
     "title": "O mnie",
     "text": {
       "h3": "Nazywam się Dmitry Kolotusha i jestem",
       "span": "web developerem",
-      "p": "Staram się pisać mój kod w czysty i czytelny sposób, aby był zrozumiały dla innych. Chcę spróbować swoich sił w rozwoju zespołu na Vue, React. Sumiennie podchodzę do powierzonych zadań. Szalone pragnienie uczenia się więcej technologii w tworzeniu stron internetowych i tworzenia naprawdę wyjątkowych, złożonych i pięknych projektów."
+      "p": "Staram się pisać mój kod w czysty i czytelny sposób, aby był zrozumiały dla innych. Chcę spróbować swoich sił w rozwoju zespołu na Vue, React. Sumiennie podchodzę do powierzonych zadań. Moim celem jest poznawanie nowych technologii w tworzeniu stron internetowych i tworzenie naprawdę unikalnych, złożonych i pięknych projektów."
     },
     "personal-info-title": {
       "birthday": "Urodziny",

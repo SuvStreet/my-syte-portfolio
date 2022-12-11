@@ -5,10 +5,10 @@
     "i": "I am a",
     "typedStrings": {
       "firstString": " ",
-      "secondString": "web developer",
-      "thirdString": "make up websites",
-      "fourthString": "junior frontend developer",
-      "fifthString": "js expert"
+      "secondString": "Frontend developer",
+      "thirdString": "layout designer",
+      "fourthString": "Vue, React specialist",
+      "fifthString": "js programmer"
     },
     "info": "Web developer with 2 years of experience. I write functional, complex, beautiful websites (Single Page Application). I strive for professional knowledge in React and Vue.",
     "nameBtnSaveResume": "Download CV"
@@ -20,12 +20,13 @@
     "portfolio": "@:portfolio.title",
     "contacts": "@:contact.title"
   },
+  "color-theme": "theme colors",
   "about": {
     "title": "About",
     "text": {
       "h3": "My name is Dmitry Kolotusha and I am a",
       "span": "web developer",
-      "p": "I strive to write my code clearly and legibly so that it is understandable to others. I want to try myself in team development on Vue, React. I am attentive to the tasks set. An insane desire to learn more technologies in web development and create truly unique, complex and beautiful projects."
+      "p": "I strive to write my code cleanly, so that it would be understandable to others. I want to try myself in team development on Vue, React. I am attentive to the tasks set. A great desire to learn more technologies in web development and create truly unique, complex and beautiful projects."
     },
     "personal-info-title": {
       "birthday": "Birthday",
