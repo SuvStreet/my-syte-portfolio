@@ -44,6 +44,8 @@
         <div class="card-language">
           <TheCardLanguage />
         </div>
+
+        <footer>© {{ ageNow }} SuvStreet</footer>
       </div>
     </div>
 
@@ -59,13 +61,14 @@
 
 <script>
 import { useStore } from 'vuex'
-import { computed } from '@vue/runtime-core'
+import { computed, ref } from '@vue/runtime-core'
 
 import TheCardLanguage from './TheCardLanguage.vue'
 
 export default {
   setup() {
     const store = useStore()
+    const ageNow = ref(new Date().getFullYear())
 
     function isClose() {
       if (store.getters['styleSwitcher/isOpen'] === true) {
@@ -83,6 +86,7 @@ export default {
       isClose,
       isNav,
       isToggleNav: computed(() => store.getters.getIsToggleNav),
+      ageNow,
     }
   },
   components: {
