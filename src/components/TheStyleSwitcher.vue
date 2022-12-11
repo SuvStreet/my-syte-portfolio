@@ -16,29 +16,16 @@
       >
       </span>
     </div>
-    <h4>Язык</h4>
-    <div class="language">
-      <span
-        v-for="(lang, id) in mapLanguage"
-        :key="id"
-        :class="[id]"
-        @click="setActiveLanguage(id)"
-      >
-        {{ lang }}
-      </span>
-    </div>
   </div>
 </template>
 
 <script>
 import { computed, onMounted } from 'vue'
 import { useStore } from 'vuex'
-import { useI18n } from 'vue-i18n'
 
 export default {
   setup() {
     const store = useStore()
-    const { locale } = useI18n()
 
     function isOpen() {
       store.commit('styleSwitcher/toggle')
@@ -57,12 +44,6 @@ export default {
       'color-5': '--color-5',
     }
 
-    const mapLanguage = {
-      ru: 'RU',
-      en: 'EN',
-      pl: 'PL',
-    }
-
     const setActiveStyle = (value) => {
       store.dispatch('styleSwitcher/setActiveStyle', value)
     }
@@ -71,21 +52,14 @@ export default {
       store.dispatch('styleSwitcher/setActiveMode')
     }
 
-    function setActiveLanguage(value) {
-      store.commit('i18n/setLanguage', value)
-      locale.value = value
-    }
-
     return {
       setActiveStyle,
       isOpen,
       mapColor,
-      mapLanguage,
       lightDarkMode,
       className: computed(() =>
         store.getters['styleSwitcher/isOpen'] ? 'open' : ''
       ),
-      setActiveLanguage
     }
   },
 }

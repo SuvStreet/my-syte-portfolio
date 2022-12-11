@@ -7,125 +7,136 @@
   padding: 30px
   height: 100%
   border-right: 1px solid var(--bg-black-50)
-  display: flex
-  justify-content: center
-  align-items: center
+  overflow-y: scroll
   z-index: 10
   transition: all 0.3s ease-in-out
   // transition-delay: 0.5s
 
-.aside .logo
-  position: absolute
-  top: 50px
-  font-size: 30px
-  text-transform: capitalize
+  & .wrapper-aside
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    min-height: 500px
+    height: 100%
+    
+  & .logo
+    position: absolute
+    top: 50px
+    font-size: 30px
+    text-transform: capitalize
 
-.aside .logo a
-  color: var(--text-black-900)
-  font-weight: 700
-  padding: 15px 20px
-  font-size: 30px
-  letter-spacing: 5px
-  position: relative
-
-.aside .logo a span
-  font-family: 'Clicker Script', cursive
-  font-size: 40px
-
-.aside .logo a::before
-  content: ''
-  position: absolute
-  width: 20px
-  height: 20px
-  border-bottom: 5px solid var(--skin-color)
-  border-left: 5px solid var(--skin-color)
-  bottom: 0
-  left: 0
-
-.aside .logo a::after
-  content: ''
-  position: absolute
-  width: 20px
-  height: 20px
-  border-top: 5px solid var(--skin-color)
-  border-right: 5px solid var(--skin-color)
-  top: 0
-  right: 0 
-
-.aside .nav-toggler
-  height: 40px
-  width: 45px
-  border: 1px solid var(--bg-black-50)
-  cursor: pointer
-  position: fixed
-  left: 300px
-  top: 20px
-  border-radius: 5px
-  background: var(--bg-black-100)
-  display: none
-  align-items: center
-  justify-content: center
-  transition: all 0.3s ease-in-out
-  // transition-delay: 0.5s
-
-.aside .nav-toggler
-
-  &.open span
-    background-color: transparent
-
-  & span
-    height: 2px
-    width: 18px
-    background: var(--skin-color)
-    display: inline-block
+  & .logo a
+    color: var(--text-black-900)
+    font-weight: 700
+    padding: 15px 20px
+    font-size: 30px
+    letter-spacing: 5px
     position: relative
 
-.aside .nav-toggler
+  & .logo a span
+    font-family: 'Clicker Script', cursive
+    font-size: 40px
 
-  &.open span::before
-    transform: rotate(45deg)
-    top: 0
-  
-  & span::before
+  & .logo a::before
     content: ''
-    height: 2px
-    width: 18px
-    background: var(--skin-color)
     position: absolute
-    top: -6px
+    width: 20px
+    height: 20px
+    border-bottom: 5px solid var(--skin-color)
+    border-left: 5px solid var(--skin-color)
+    bottom: 0
     left: 0
 
-.aside .nav-toggler
-
-  &.open span::after
-    transform: rotate(-45deg)
-    top: 0
-  
-  & span::after
+  & .logo a::after
     content: ''
-    height: 2px
-    width: 18px
-    background: var(--skin-color)
     position: absolute
-    top: 6px
-    left: 0
+    width: 20px
+    height: 20px
+    border-top: 5px solid var(--skin-color)
+    border-right: 5px solid var(--skin-color)
+    top: 0
+    right: 0 
 
-.aside .nav
-  margin-top: 50px
+  & .nav-toggler
+    height: 40px
+    width: 45px
+    border: 1px solid var(--bg-black-50)
+    cursor: pointer
+    position: fixed
+    left: 300px
+    top: 20px
+    border-radius: 5px
+    background: var(--bg-black-100)
+    display: none
+    align-items: center
+    justify-content: center
+    transition: all 0.3s ease-in-out
+    // transition-delay: 0.5s
 
-.aside .nav li
-  margin-bottom: 20px
-  display: block
+  & .nav-toggler
 
-.aside .nav li a
-  font-size: 16 px
-  font-weight: 600
-  border-bottom: 1px solid var(--bg-black-50)
-  color: var(--text-black-900)
-  padding: 5px 15px
+    &.open span
+      background-color: transparent
 
-.aside .nav li a.active 
-  color: var(--skin-color)
+    & span
+      height: 2px
+      width: 18px
+      background: var(--skin-color)
+      display: inline-block
+      position: relative
 
-.aside .nav li a i
-  margin-right: 15px
+  & .nav-toggler
+
+    &.open span::before
+      transform: rotate(45deg)
+      top: 0
+    
+    & span::before
+      content: ''
+      height: 2px
+      width: 18px
+      background: var(--skin-color)
+      position: absolute
+      top: -6px
+      left: 0
+
+  & .nav-toggler
+
+    &.open span::after
+      transform: rotate(-45deg)
+      top: 0
+    
+    & span::after
+      content: ''
+      height: 2px
+      width: 18px
+      background: var(--skin-color)
+      position: absolute
+      top: 6px
+      left: 0
+
+  & .nav
+    display: flex
+    margin-top: 80px
+    align-items: flex-start
+    flex-direction: column
+    justify-content: center
+    flex: 1 1 auto
+
+  & .nav li
+    margin-bottom: 20px
+    display: block
+
+  & .nav li a
+    font-size: 16 px
+    font-weight: 600
+    border-bottom: 1px solid var(--bg-black-50)
+    color: var(--text-black-900)
+    padding: 5px 15px
+
+  & .nav li a.active 
+    color: var(--skin-color)
+
+  & .nav li a i
+    margin-right: 15px

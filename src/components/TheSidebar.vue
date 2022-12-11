@@ -1,45 +1,52 @@
 <template>
   <div class="main-container" @click="isClose">
     <div :class="['aside', isToggleNav]">
-      <div class="logo">
-        <router-link to="/"><span>Suv</span>Street </router-link>
+      <div class="wrapper-aside">
+        <div class="logo">
+          <router-link to="/"><span>Suv</span>Street </router-link>
+        </div>
+        <div :class="['nav-toggler', isToggleNav]" @click="isNav">
+          <span></span>
+        </div>
+        <ul class="nav">
+          <li @click="isNav">
+            <router-link to="/">
+              <i class="fa fa-home"></i>
+              {{ $t('menu.home') }}
+            </router-link>
+          </li>
+          <li @click="isNav">
+            <router-link to="/about">
+              <i class="fa fa-user"></i>
+              {{ $t('menu.about') }}
+            </router-link>
+          </li>
+          <li @click="isNav">
+            <router-link to="/experience">
+              <i class="fa fa-brain"></i>
+              {{ $t('menu.experience') }}
+            </router-link>
+          </li>
+          <li @click="isNav">
+            <router-link to="/portfolio">
+              <i class="fa fa-briefcase"></i>
+              {{ $t('menu.portfolio') }}
+            </router-link>
+          </li>
+          <li @click="isNav">
+            <router-link to="/contact">
+              <i class="fa fa-comments"></i>
+              {{ $t('menu.contacts') }}
+            </router-link>
+          </li>
+        </ul>
+
+        <div class="card-language">
+          <TheCardLanguage />
+        </div>
       </div>
-      <div :class="['nav-toggler', isToggleNav]" @click="isNav">
-        <span></span>
-      </div>
-      <ul class="nav">
-        <li @click="isNav">
-          <router-link to="/">
-            <i class="fa fa-home"></i>
-            {{ $t('menu.home') }}
-          </router-link>
-        </li>
-        <li @click="isNav">
-          <router-link to="/about">
-            <i class="fa fa-user"></i>
-            {{ $t('menu.about') }}
-          </router-link>
-        </li>
-        <li @click="isNav">
-          <router-link to="/experience">
-            <i class="fa fa-brain"></i>
-            {{ $t('menu.experience') }}
-          </router-link>
-        </li>
-        <li @click="isNav">
-          <router-link to="/portfolio">
-            <i class="fa fa-briefcase"></i>
-            {{ $t('menu.portfolio') }}
-          </router-link>
-        </li>
-        <li @click="isNav">
-          <router-link to="/contact">
-            <i class="fa fa-comments"></i>
-            {{ $t('menu.contacts') }}
-          </router-link>
-        </li>
-      </ul>
     </div>
+
     <div class="main-content">
       <router-view v-slot="{ Component }">
         <transition name="fade">
@@ -53,6 +60,8 @@
 <script>
 import { useStore } from 'vuex'
 import { computed } from '@vue/runtime-core'
+
+import TheCardLanguage from './TheCardLanguage.vue'
 
 export default {
   setup() {
@@ -75,6 +84,9 @@ export default {
       isNav,
       isToggleNav: computed(() => store.getters.getIsToggleNav),
     }
+  },
+  components: {
+    TheCardLanguage,
   },
 }
 </script>
