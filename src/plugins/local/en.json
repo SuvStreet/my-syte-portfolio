@@ -101,8 +101,9 @@
   "project": {
     "openDetail": "More details"
   },
-  "projectInfo": {
+  "project-info": {
     "description": "Project Description",
+    "description-empty": "Description is missing",
     "info": "Project Information",
     "technology": "Technologies",
     "date": "Date",
