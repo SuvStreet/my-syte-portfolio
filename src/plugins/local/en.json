@@ -41,7 +41,7 @@
       "{age}",
       "{website}",
       "{account}{'@'}{domain}",
-      "Poznan",
+      "Moscow",
       "In active search"
     ],
     "button": "Contact me",
@@ -120,7 +120,7 @@
       },
       "marker": {
         "title": "Office",
-        "text": "Poznan"
+        "text": "Moscow"
       },
       "envelope": {
         "title": "Email",
