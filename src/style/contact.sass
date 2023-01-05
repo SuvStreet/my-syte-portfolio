@@ -1,3 +1,7 @@
+@mixin hiden-text
+  transition: opacity 0.3s ease
+  opacity: 0
+  
 .contact-title
   color: var(--skin-color)
   text-align: center
@@ -75,10 +79,76 @@
       & textarea.form-control
         min-height: 140px
         resize: vertical
-        
-    & .btn
+
+  & .button 
+    padding: 12px 35px
+    border-radius: 100px
+    height: 50px
+    border: 2px solid var(--skin-color)
+    text-align: center
+    transition: all 0.3s
+    cursor: pointer
+    color: #fff
+    text-transform: uppercase
+    font-weight: 500
+    background: var(--skin-color)
+    
+    &:not([disabled]):hover
+      transform: scale(1.05)
+      
+    &.load
+      width: 50px
       height: 50px
-      padding: 0 50px
+      padding: 7px
+      border-left-color: #eee
+      border-top-color: #eee
+
+      animation: spin 3s linear infinite
+      /* чтобы не вращалась кнопка, пока еще не круглая */
+      animation-delay: 0.3s
+
+      & .textButton
+        @include hiden-text
+
+    &.success
+      width: 50px
+      padding: 0 6px
+      background: #008000
+      border-color: #008000
+
+      & .textButton
+        @include hiden-text
+
+
+    &.error
+      width: 50px
+      padding: 0 6px
+      background: #FF0000
+      border-color: #FF0000
+
+      & .textButton
+        @include hiden-text
+        
+      & svg
+        height: 26px
+
+      
+    & .textButton
+      transition: opacity 1.3s ease
+      opacity: 1
+
+    & #b 
+      animation: showB 5.6s ease
+
+@keyframes showB 
+  0% 
+    transform: scale(0.1)
+  100% 
+    transform: scale(1)
+
+@keyframes spin 
+  100% 
+    transform: rotate(360deg)    
   
 .errors
   margin-left: 25px

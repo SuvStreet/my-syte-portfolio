@@ -6,15 +6,16 @@ import {
   helpers,
   maxLength,
 } from '@vuelidate/validators'
-import { reactive } from '@vue/reactivity'
-import { useStore } from 'vuex'
+import { reactive, ref } from '@vue/reactivity'
 import { computed } from '@vue/runtime-core'
 import { useI18n } from 'vue-i18n'
+import { useStore } from 'vuex'
 
 export function validateForm() {
-  const store = useStore()
   const { t } = useI18n()
+  const store = useStore()
 
+  const isFormCorrect = ref(false)
   const state = reactive({
     telegram: '',
     email: '',
@@ -93,27 +94,26 @@ export function validateForm() {
       text: state.message,
     }
 
-    const isFormCorrect = await v$.value.$validate()
+    isFormCorrect.value = await v$.value.$validate()
 
-    if (isFormCorrect) {
+    if (isFormCorrect.value) {
       store.dispatch('tgBotMessage/postMessage', listMessage)
-
       state.telegram = ''
       state.email = ''
       state.subject = ''
       state.message = ''
-
       v$.value.$reset()
     }
   }
 
   return {
-    onSubmit,
     state,
     v$,
     telegramErrors,
     emailErrors,
     subjectErrors,
     messageErrors,
+    isFormCorrect,
+    onSubmit
   }
 }

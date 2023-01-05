@@ -71,5 +71,8 @@ export default {
     isOpen(state) {
       return state.isOpen
     },
+    getColorTheme(state) {
+      return state.color
+    }
   },
 }

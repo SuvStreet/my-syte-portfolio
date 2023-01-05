@@ -63,7 +63,7 @@
 
     <div class="row">
       <div class="form-item col-12 padd-15">
-        <button class="btn">{{ $t('contact.form-button') }}</button>
+        <SubmitButton :validate="isFormCorrect" />
       </div>
     </div>
   </form>
@@ -71,12 +71,16 @@
 
 <script>
 import { validateForm } from './ValidateForm'
+import SubmitButton from './Submit/SubmitButton.vue'
 
 export default {
   setup() {
     return {
       ...validateForm(),
     }
+  },
+  components: {
+    SubmitButton,
   },
 }
 </script>
