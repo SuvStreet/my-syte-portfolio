@@ -47,7 +47,6 @@ export default {
     })
 
     const onDownloadCV = () => {
-      console.log('onDownloadCV')
       store.dispatch('downloadCV/downloadCV', store.getters['i18n/getLanguage'])
     }
 
