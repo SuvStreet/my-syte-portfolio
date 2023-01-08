@@ -17,7 +17,7 @@
           </button>
         </div>
         <div class="home-img padd-15">
-          <img src="../assets/my-foto.jpg" alt="my-foto" />
+          <img src="../assets/my-foto.jpg" alt="my-photo" />
         </div>
       </div>
     </template>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { computed, onMounted, watch } from '@vue/runtime-core'
+import { computed, onMounted } from '@vue/runtime-core'
 import { useStore } from 'vuex'
 
 import MainLayout from '../components/layout/MainLayout.vue'
@@ -34,22 +34,21 @@ import TheTypeText from '../components/TheTypeText.vue'
 export default {
   setup() {
     const store = useStore()
-    
-    const locale = computed(() => store.getters['i18n/getLanguage'])
-    const linkDownload = computed(() =>
-      store.dispatch('downloadCV/setLinkDownloadCV', locale.value)
-    )
 
-    watch(locale, () => {
-      linkDownload.value
-    })
+    const linkDownload = computed(() =>
+      store.dispatch(
+        'downloadCV/setLinkDownloadCV',
+        store.getters['i18n/getLanguage']
+      )
+    )
 
     onMounted(() => {
       linkDownload.value
     })
 
     const onDownloadCV = () => {
-      store.dispatch('downloadCV/downloadCV', locale.value)
+      console.log('onDownloadCV')
+      store.dispatch('downloadCV/downloadCV', store.getters['i18n/getLanguage'])
     }
 
     return {

@@ -34,7 +34,6 @@ import AboutExperience from '../components/about/AboutExperience.vue'
 
 export default {
   setup() {
-    
     const qTitle = {
       education: 'Образование',
       experience: 'Опыт',

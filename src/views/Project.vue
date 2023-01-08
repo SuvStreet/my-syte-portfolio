@@ -27,7 +27,7 @@
         </template>
 
         <template #slider>
-          <ProjectSlider :photo="projectInfo.photo_slider"/>
+          <ProjectSlider :photo="projectInfo.photo_slider" />
         </template>
       </ProjectInfo>
     </template>
@@ -75,7 +75,7 @@ export default {
 
     function clickClose() {
       store.commit('setIsToggleDetails', '')
-      router.push('/portfolio')
+      router.push(`/${store.getters['i18n/getLanguage']}/portfolio`)
     }
 
     return {

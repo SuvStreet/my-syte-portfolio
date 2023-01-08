@@ -3,6 +3,8 @@ import ru from '../plugins/local/ru.json'
 import en from '../plugins/local/en.json'
 import pl from '../plugins/local/pl.json'
 
+import store from '../store'
+
 const messages = {
   ru,
   en,
@@ -10,29 +12,37 @@ const messages = {
 }
 
 const datetimeFormats = {
-  'ru': {
+  ru: {
     long: {
-      year: 'numeric', month: 'short', day: 'numeric',
-    }
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    },
   },
-  'en': {
+  en: {
     long: {
-      year: 'numeric', month: 'short', day: 'numeric',
-    }
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    },
   },
-  'pl': {
+  pl: {
     long: {
-      year: 'numeric', month: 'short', day: 'numeric',
-    }
-  }
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    },
+  },
 }
 
 const i18n = createI18n({
   legacy: false,
-  locale: `ru`,
-  fallbackLocale: 'ru',
+  locale: store.getters['i18n/getLanguage'],
+  fallbackLocale: 'en',
   messages,
-  datetimeFormats
+  datetimeFormats,
+  missingWarn: false,
+  fallbackWarn: false,
 })
 
 export default i18n

@@ -19,14 +19,20 @@
       </div>
     </div>
 
-    <Button link="/contact" className="buttons padd-15">
-      <template #title>{{ $t('about.button') }}</template>
-    </Button>
+    <div class="row padd-15">
+      <router-link
+        :to="`/${$store.getters['i18n/getLanguage']}/contact`"
+        v-slot="{ navigate }"
+      >
+        <button @click="navigate" className="btn buttons">
+          {{ $t('about.button') }}
+        </button>
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script>
-import Button from '../other/Button.vue'
 
 export default {
   setup() {
@@ -64,9 +70,6 @@ export default {
       titleMap,
       Age,
     }
-  },
-  components: {
-    Button,
   },
 }
 </script>

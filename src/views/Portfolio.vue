@@ -65,8 +65,7 @@ export default {
       if (store.getters.getIsToggleNav === 'open') {
         store.commit('setIsToggleNav', '')
       }
-
-      router.push(`/project/${id}`)
+      router.push(`project/${id}`)
     }
 
     function titleProject(id) {

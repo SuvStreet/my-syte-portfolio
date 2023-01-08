@@ -12,7 +12,7 @@ import { useStore } from 'vuex'
 export default {
   setup() {
     const store = useStore()
-    console.log('store', store.getters['i18n/getLanguage'])
+    // console.log('store', store.getters['i18n/getLanguage'])
 
     const { t } = useI18n()
 

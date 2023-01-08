@@ -1,38 +1,45 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import store from '../store'
 import Home from '../views/Home.vue'
 
 const routes = [
   {
-    path: '/',
+    path: `/:locale/home`,
     name: 'Home',
     component: Home,
+    props: true,
   },
   {
-    path: '/about',
+    path: '/:locale/about',
     name: 'About',
+    props: true,
     component: () => import('../views/About.vue'),
   },
   {
-    path: '/experience',
+    path: '/:locale/experience',
     name: 'Experience',
+    props: true,
     component: () => import('../views/Experience.vue'),
   },
   {
-    path: '/portfolio',
+    path: '/:locale/portfolio',
     name: 'Portfolio',
+    props: true,
     component: () => import('../views/Portfolio.vue'),
   },
   {
-    path: '/project/:id',
+    path: '/:locale/project/:id',
     name: 'Project',
     props: true,
     component: () => import('../views/Project.vue'),
   },
   {
-    path: '/contact',
+    path: '/:locale/contact',
     name: 'Contact',
+    props: true,
     component: () => import('../views/Contact.vue'),
   },
+  { path: '/:notFound(.*)', redirect: `/${store.getters['i18n/getLanguage']}/home` }
 ]
 
 const router = createRouter({
