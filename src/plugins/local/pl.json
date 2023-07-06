@@ -10,7 +10,7 @@
       "fourthString": "Vue, React specjalista",
       "fifthString": "js programista"
     },
-    "info": "Web developer z 2 letnim doświadczeniem. Piszę funkcjonalne, złożone, piękne strony internetowe (Single Page Application). Dążę do profesjonalnej wiedzy w React i Vue.",
+    "info": "Piszę funkcjonalne, złożone, piękne strony internetowe (Single Page Application). Dążę do profesjonalnej wiedzy w React i Vue.",
     "nameBtnSaveResume": "Pobierz CV"
   },
   "menu": {
@@ -128,7 +128,7 @@
       },
       "web": {
         "title": "Strona internetowa",
-        "text": "www.suvstreet.com"
+        "text": "suvstreet-portfolio.web.app"
       }
     },
     "second-title": "Napisz do mnie w Telegramie",

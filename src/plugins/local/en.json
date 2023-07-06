@@ -10,7 +10,7 @@
       "fourthString": "Vue, React specialist",
       "fifthString": "js programmer"
     },
-    "info": "Web developer with 2 years of experience. I write functional, complex, beautiful websites (Single Page Application). I strive for professional knowledge in React and Vue.",
+    "info": "I write functional, complex, beautiful websites (Single Page Application). I strive for professional knowledge in React and Vue.",
     "nameBtnSaveResume": "Download CV"
   },
   "menu": {
@@ -128,7 +128,7 @@
       },
       "web": {
         "title": "Website",
-        "text": "www.suvstreet.com"
+        "text": "suvstreet-portfolio.web.app"
       }
     },
     "second-title": "Write to me in Telegram",

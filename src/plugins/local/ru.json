@@ -10,7 +10,7 @@
       "fourthString": "Vue, React специалист",
       "fifthString": "JavaScript программист"
     },
-    "info": "Веб-разработчик с 2-х летним опытом работы. Пишу функциональные, сложные, красивые веб-сайты (Single Page Application). Стремлюсь к профессиональным знаниям в React и Vue.",
+    "info": "Пишу функциональные, сложные, красивые веб-сайты (Single Page Application). Стремлюсь к профессиональным знаниям в React и Vue.",
     "nameBtnSaveResume": "Скачать резюме"
   },
   "menu": {
@@ -129,7 +129,7 @@
       },
       "web": {
         "title": "Сайт",
-        "text": "www.suvstreet.com"
+        "text": "suvstreet-portfolio.web.app"
       }
     },
     "second-title": "Напиши мне в Telegram",
