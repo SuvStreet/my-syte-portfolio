@@ -54,7 +54,7 @@
         },
         "js": {
           "title": "JavaScript marathon",
-          "text": "Intensive marathon in JavaScript. The author of the course is Vladilen Minin, founder of Result.Shool"
+          "text": "Intensive marathon in JavaScript. The author of the course is Vladilen Minin, founder of Result.School"
         },
         "react": {
           "title": "React marathon",
@@ -77,13 +77,13 @@
     "experience-card": {
       "title": "An experience",
       "text": {
-        "result_shool": {
-          "title": "Result.Shool",
+        "result_school": {
+          "title": "Result.School",
           "text": "Development of web pages on Vue 3, code optimization, development on the Composition API, rewriting code from the Option API to the Composition API"
         },
         "ormedia": {
           "title": "ORMedia",
-          "text": "Engaged in web page layout, maintained and optimized the old code, front end development on React."
+          "text": "Engaged in web page layout, maintained and optimized the old code, frontend development on React."
         }
       }
     }
@@ -142,7 +142,7 @@
     "form-button": "Send a message"
   },
   "errors": {
-    "required" : "Required to fill in!",
+    "required": "Required to fill in!",
     "min-length-value": "The minimum length is {value} characters!",
     "telegram-name": "Invalid telegram name!",
     "email-name": "Invalid email address!",

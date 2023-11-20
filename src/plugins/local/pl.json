@@ -50,11 +50,11 @@
       "text": {
         "vue": {
           "title": "Kurs Vue 3",
-          "text": "Poznawanie i nauka frameworka Vue 3 w szkole Result.Shool"
+          "text": "Poznawanie i nauka frameworka Vue 3 w szkole Result.School"
         },
         "js": {
           "title": "JavaScript maraton",
-          "text": "Intensywny maraton JavaScript. Autor kursu – Vladilen Minin, założyciel szkoły Result.Shool"
+          "text": "Intensywny maraton JavaScript. Autor kursu – Vladilen Minin, założyciel szkoły Result.School"
         },
         "react": {
           "title": "React maraton",
@@ -77,8 +77,8 @@
     "experience-card": {
       "title": "Doświadczenie",
       "text": {
-        "result_shool": {
-          "title": "Result.Shool",
+        "result_school": {
+          "title": "Result.School",
           "text": "Tworzenie stron internetowych w Vue 3, Optymalizacja kodu, tworzenie w Composition API, przepisywanie kodu z Option API na Composition API"
         },
         "ormedia": {

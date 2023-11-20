@@ -26,7 +26,7 @@ import AboutCard from './AboutCard.vue'
 export default {
   setup() {
     const experienceMapList = {
-      result_shool: '2021-2022',
+      result_school: '2021-2022',
       ormedia: '2020-2021'
     }
 
