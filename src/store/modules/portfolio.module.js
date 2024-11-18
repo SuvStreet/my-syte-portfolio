@@ -11,7 +11,7 @@ export default {
       state.loader = statusLoader
     },
     setProjects(state, listProjects) {
-      state.projects = listProjects
+      state.projects = listProjects.toSorted((a, b) => b.idx - a.idx)
     },
   },
   actions: {

@@ -28,7 +28,7 @@
           >
             <PortfolioCard
               :poster="project.avatar"
-              :title="titleProject(project.idx)"
+              :title="titleProject(project.title)"
             />
           </div>
         </div>
@@ -55,6 +55,7 @@ export default {
 
     const statusLoader = computed(() => store.getters['portfolio/loader'])
     const listProjects = computed(() => store.getters['portfolio/getProjects'])
+
     // const listProjects = ref([])
 
     onMounted(() => {
@@ -68,9 +69,9 @@ export default {
       router.push(`project/${id}`)
     }
 
-    function titleProject(id) {
+    function titleProject(title) {
       const language = store.getters['i18n/getLanguage']
-      return listProjects.value[id].title[language]
+      return title[language]
     }
 
     return {
