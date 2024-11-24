@@ -10,15 +10,13 @@
         ></div>
       </div>
       <div class="text">
-        <h2>{{ percent }}%</h2>
         <small>
           <p>{{ technology }}</p>
           <span class="icon" v-html="icons[technology]"></span>
         </small>
       </div>
       <div class="direction">
-        <p>Lorem ipsum dolor sit amet.</p>
-        <!-- <p>Работа с React</p> -->
+        <p>{{ description }}</p>
       </div>
     </div>
   </div>
@@ -30,7 +28,7 @@ import { ref } from '@vue/reactivity'
 import icons from './iconsPath'
 
 export default {
-  props: ['technology', 'percent'],
+  props: ['technology', 'percent', 'description'],
   setup(props) {
     const dots = ref(100)
     const percent = ref((dots.value * props.percent) / 100)
@@ -40,7 +38,7 @@ export default {
       dots,
       rotate,
       percent,
-      icons
+      icons,
     }
   },
 }
