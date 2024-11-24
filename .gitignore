@@ -11,6 +11,7 @@ package-lock.json
 /src/_firebase.js
 /src/suvstreet-portfolio-default-rtdb-export.json
 firebase.json
+firebase-debug.log
 
 # local env files
 .env.local
