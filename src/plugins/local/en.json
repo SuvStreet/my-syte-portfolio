@@ -89,7 +89,66 @@
     }
   },
   "experience": {
-    "title": "Experience"
+    "title": "Experience",
+    "technology": {
+      "html": {
+        "text": "Build a solid foundation for your website."
+      },
+      "css": {
+        "text": "Turn ideas into a stylish and vibrant design."
+      },
+      "javascript": {
+        "text": "Bring your project to life by adding interactivity."
+      },
+      "reactjs": {
+        "text": "Create fast and responsive user interfaces."
+      },
+      "vuejs": {
+        "text": "Build flexible and modern interfaces."
+      },
+      "git": {
+        "text": "Ensure control and reliability in development."
+      },
+      "sass/scss": {
+        "text": "Enhance your site with refined style and CSS convenience."
+      },
+      "axios": {
+        "text": "Take care of reliable server communication."
+      },
+      "redux": {
+        "text": "Organize data and state management seamlessly."
+      },
+      "react router": {
+        "text": "Connect your site's pages into a unified flow."
+      },
+      "vuerouter": {
+        "text": "Provide smooth navigation between pages."
+      },
+      "vuex": {
+        "text": "Securely manage your Vue application's state."
+      },
+      "nodejs": {
+        "text": "Deliver a reliable and efficient server-side solution."
+      },
+      "mongodb": {
+        "text": "Organize and store your data securely."
+      },
+      "webpack": {
+        "text": "Bundle your project into a unified and optimized system."
+      },
+      "vite": {
+        "text": "Launch and build your project lightning-fast."
+      },
+      "express": {
+        "text": "Power your application with a lightweight and robust server."
+      },
+      "typescript": {
+        "text": "Make your code reliable and predictable."
+      },
+      "docker": {
+        "text": "Package your application for quick and secure deployment."
+      }
+    }
   },
   "portfolio": {
     "title": "Portfolio",

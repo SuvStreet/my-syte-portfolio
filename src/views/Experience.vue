@@ -20,6 +20,7 @@
 
 <script>
 import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 
 import MainLayout from '../components/layout/MainLayout.vue'
 import SectionTitle from '../components/layout/SectionTitle.vue'
@@ -28,7 +29,7 @@ import ProgressBar from '../components/experience/ProgressBar.vue'
 export default {
   setup() {
     const t = useI18n()
-    
+
     const mapExp = {
       ReactJs: '101',
       Redux: '101',
@@ -51,16 +52,18 @@ export default {
       Webpack: '101',
     }
 
-    const mapDescription = Object.keys(mapExp).reduce((acc, technology) => {
-      const description =
-        t.messages.value[t.locale.value]?.experience?.technology?.[
-          technology.toLocaleLowerCase()
-        ]
-      if (description) {
-        acc[technology] = description.text
-      }
-      return acc
-    }, {})
+    const mapDescription = computed(() => {
+      return Object.keys(mapExp).reduce((acc, technology) => {
+        const description =
+          t.messages.value[t.locale.value]?.experience?.technology?.[
+            technology.toLocaleLowerCase()
+          ]
+        if (description) {
+          acc[technology] = description.text
+        }
+        return acc
+      }, {})
+    })
 
     return {
       mapExp,

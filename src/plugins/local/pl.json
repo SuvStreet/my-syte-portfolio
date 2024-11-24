@@ -89,7 +89,66 @@
     }
   },
   "experience": {
-    "title": "Doświadczenie"
+    "title": "Doświadczenie",
+    "technology": {
+      "html": {
+        "text": "Zbuduję solidną podstawę dla Twojej strony internetowej."
+      },
+      "css": {
+        "text": "Zamienię pomysły w stylowy i żywy design."
+      },
+      "javascript": {
+        "text": "Tchnę życie w Twój projekt, dodając interaktywność."
+      },
+      "reactjs": {
+        "text": "Stworzę szybkie i responsywne interfejsy użytkownika."
+      },
+      "vuejs": {
+        "text": "Zaprojektuję elastyczne i nowoczesne interfejsy."
+      },
+      "git": {
+        "text": "Zagwarantuję kontrolę i niezawodność podczas tworzenia projektu."
+      },
+      "sass/scss": {
+        "text": "Udekoruję stronę z finezyjnym stylem i wygodą pracy z CSS."
+      },
+      "axios": {
+        "text": "Zadbam o niezawodną komunikację z serwerem."
+      },
+      "redux": {
+        "text": "Zorganizuję dane i zarządzanie stanem bez chaosu."
+      },
+      "react router": {
+        "text": "Połączę strony Twojej witryny w spójną historię."
+      },
+      "vuerouter": {
+        "text": "Zapewnię płynną nawigację między stronami."
+      },
+      "vuex": {
+        "text": "Bezpiecznie zarządzam stanem Twojej aplikacji w Vue."
+      },
+      "nodejs": {
+        "text": "Zapewnię niezawodne i wydajne rozwiązanie po stronie serwera."
+      },
+      "mongodb": {
+        "text": "Zorganizuję i bezpiecznie przechowam Twoje dane."
+      },
+      "webpack": {
+        "text": "Skomponuję projekt w zintegrowany i zoptymalizowany system."
+      },
+      "vite": {
+        "text": "Błyskawicznie uruchomię i zbuduję Twój projekt."
+      },
+      "express": {
+        "text": "Zapewnię lekki i solidny serwer dla Twojej aplikacji."
+      },
+      "typescript": {
+        "text": "Uczynię Twój kod niezawodnym i przewidywalnym."
+      },
+      "docker": {
+        "text": "Spakuję aplikację do szybkiego i bezpiecznego wdrożenia."
+      }
+    }
   },
   "portfolio": {
     "title": "Portfolio",
@@ -142,7 +201,7 @@
     "form-button": "Wyślij wiadomość"
   },
   "errors": {
-    "required" : "Obowiązkowe do wypełnienia!",
+    "required": "Obowiązkowe do wypełnienia!",
     "min-length-value": "Minimalna długość - {value} znaków!",
     "telegram-name": "Nieprawidłowa nazwa telegramu!",
     "email-name": "Nieprawidłowy adres e-mail!",
